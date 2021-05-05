@@ -172,7 +172,7 @@ select
 	left: 0
 	right: 0
 	z-index: 10px
-	padding: 64px 0
+	padding: 64px 0 64px 0
 	+d
 		padding: 40px 0 
 	&__center
@@ -197,9 +197,9 @@ select
 				.header__pic_white
 					display: inline-block
 	&__pic
-		width: 214px
+		width: 80px
 		+d
-			width: 161px
+			width: 55px
 		&_white
 			display: none
 	&__wrap
@@ -226,6 +226,8 @@ select
 				.line
 					path
 						animation: dash 1.5s linear forwards
+						stroke: $white
+						opacity: .1
 	&__nav
 		display: flex
 		margin: 0 auto 
@@ -240,11 +242,13 @@ select
 		transition: color .25s
 		+m
 			font-size: 32px
-			color: #595976 
+			// color: #595976 
+			color: $text-light
 		&:hover
 			color: $text-light
 			+m
-				color: #595976  
+				// color: #595976  
+				color: $white  
 		&.active
 			color: $primary 
 			+m
@@ -267,7 +271,7 @@ select
 		padding: 0 5px 
 		border-radius: 50%
 		// background: linear-gradient(180deg, #3A8FFF 0%, #0837AE 100%) 
-		background-color: $pink;
+		background-color: $green;
 		text-align: center
 		font-size: 14px
 		line-height: 24px
@@ -275,6 +279,8 @@ select
 		color: $wh  
 		+m
 			bottom: calc(100% - 17px)
+			background: $wh
+			color: $text-dark
 	&__btn
 		// +w
 		//   font-size: 18px
@@ -1963,7 +1969,7 @@ select
 		height: 48px
 		margin-right: 16px
 		border-radius: 50% 
-		background: $secondary  
+		background: $primary  
 		overflow: hidden
 		font-size: 0
 		+d
@@ -2551,9 +2557,9 @@ select
 		+d
 			margin-bottom: 32px
 	&__logo &__pic
-		width: 191px
+		width: 100px
 		+d
-			width: 161px
+			width: 80px
 	&__body &__text
 		max-width: 565px
 		margin: 0 auto 50px 
@@ -3944,7 +3950,7 @@ select
 			height: 592px
 			margin-left: -294px
 			border-radius: 50% 
-			background: $primary 
+			background: $green-light 
 			+d
 				top: 110px
 			+t
@@ -3999,7 +4005,7 @@ select
 			left: calc(50% - 627px)
 			width: 32px
 			height: 32px
-			background: $primary
+			background: $secondary
 			+m
 				top: 172px
 				right: -16px

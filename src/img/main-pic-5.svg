@@ -1,3 +1,11 @@
-<svg width="563" height="722" viewBox="0 0 563 722" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M183.141 52.3341C191.933 21.3676 220.212 0 252.403 0H539C552.255 0 563 10.7452 563 24V698C563 711.255 552.255 722 539 722H24.7631C8.83442 722 -2.67503 706.768 1.67567 691.445L183.141 52.3341Z" fill="#C897E4"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="563px" height="722px" viewBox="0 0 563 722" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>main-pic-5</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.5">
+        <g id="main-pic-5" fill="#ABDD7E">
+            <path d="M183.141,52.3341 C191.933,21.3676 220.212,0 252.403,0 L539,0 C552.255,0 563,10.7452 563,24 L563,698 C563,711.255 552.255,722 539,722 L24.7631,722 C8.83442,722 -2.67503,706.768 1.67567,691.445 L183.141,52.3341 Z" id="Path"></path>
+        </g>
+    </g>
 </svg>
