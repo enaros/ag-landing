@@ -1,0 +1,116 @@
+.quality4
+	padding: 121px 0 136px
+	+d
+		padding: 100px 0 118px 
+	+m
+		padding: 90px 0 100px 
+	&__title
+		max-width: 880px
+		margin: 0 auto 20px
+		text-align: center
+		+d
+			max-width: 540px
+		+m
+			max-width: 100%
+			text-align: left 
+	&__info
+		max-width: 820px
+		margin: 0 auto 71px
+		text-align: center
+		+d
+			max-width: 690px
+		+m
+			max-width: 100% 
+			margin-bottom: 40px
+			text-align: left
+	&__row
+		display: flex
+		margin: 0 -15px
+		+d
+			margin: 0 -10px
+		+m
+			display: block
+			margin: 0
+	&__col
+		flex: 0 0 calc(50% - 30px)
+		width: calc(50% - 30px)
+		margin: 0 15px
+		+d
+			flex: 0 0 calc(50% - 20px)
+			width: calc(50% - 20px)
+			margin: 0 10px
+		+m
+			width: 100%
+			margin: 0 
+		&:nth-child(2)
+			padding-top: 63px
+			+d
+				padding-top: 26px
+			+m
+				padding: 0
+		+nl
+			+m
+				margin-bottom: 26px
+	&__item
+		padding: 48px 48px 50px
+		border-radius: 15px
+		background: $bg3
+		+x
+			padding: 40px 32px
+		+d
+			padding: 38px 30px 30px
+		+m
+			padding: 38px 32px  
+		+nl
+			margin-bottom: 30px
+			+d
+				margin-bottom: 26px
+	&__preview
+		margin-bottom: 49px
+		+t
+			margin-bottom: 36px
+		img
+			width: 100% 
+	&__category
+		display: flex
+		align-items: flex-start
+		margin-bottom: 21px
+		+h6
+		font-weight: 700 
+		+d
+			font-size: 24px
+		+m
+			margin-bottom: 16px
+	&__mark
+		flex-shrink: 0 
+		margin-left: auto
+		padding: 0 15px
+		background: $primary
+		border-radius: 18px  
+		font-size: 18px
+		line-height: 36px
+		font-weight: 600
+		color: $white 
+		+d
+			margin-top: -2px
+		+m
+			margin-left: 15px 
+	&__text
+		color: $text3
+		+d
+			max-width: 320px
+			font-size: 16px
+	&__btns
+		margin-top: 94px
+		text-align: center
+		+t
+			margin-top: 64px
+	&__btn
+		+m
+			min-width: 100% 
+			padding: 0 16px 
+
++dark
+	.quality4
+		&__item
+			background: $dark3 

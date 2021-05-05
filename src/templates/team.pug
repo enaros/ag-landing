@@ -1,0 +1,126 @@
+---
+title: About us
+---
+extends layouts/_layout
+block content
+	.main
+		+header(0, 0, 'active')
+		.main5
+			.main5__center.center
+				.main5__row
+					.main5__col
+						.main5__preview
+							img(srcset="img/img-move/content/main-pic-6.1@2x.png 2x" src="img/img-move/content/main-pic-6.1.png" alt="")
+					.main5__col
+						.main5__wrap
+							h1.main5__title.h2(data-aos="animation-scale-top") 
+								| Hi there 👋 <br>
+								| Meet the team.
+							.main5__info.info 
+								| <strong>Agrinorm</strong> is a Swiss based deep tech company leveraging cutting edge machine 
+								| learning techniques for the optimization of fruit and veg supply chains. 
+							.main5__info.info 
+								| We develop technology that enables our customers to excel in quality of fresh 
+								| produce and achieve price leadership while reducing environmental impact.
+							//- a.more(href="javascript:void(0)")
+								| Meet the crew
+								+i('arrow-right')
+		.slider.bg1
+			.slider__center.center
+				h2.slider__title.h2(data-aos="animation-scale-top") What we’re about
+				.slider__info.info 
+					| We are working towards efficient, fair, <strong>no-waste</strong> value chains that supply tasty, 
+					| nutritious, sustainably produced fruits and vegetables to consumers.
+				.slider__container
+					.slider__list.js-slider-about
+						.slider__preview
+							img(srcset="img/img-move/content/slider-pic-1@2x.png 2x" src="img/img-move/content/slider-pic-1.png" alt="")
+						.slider__preview
+							img(src="img/img-move/content/sl-pic-1.png" alt="")
+						.slider__preview
+							img(src="img/img-move/content/sl-pic-2.png" alt="")
+		.team
+			.team__center.center
+				h2.team__title.h2(data-aos="animation-scale-top") Our team members
+				.team__info.info These are the people who work every day to create great products that will help you in your work.
+				.team__list
+					+teamItem('img/team-daria.png', 'Daria Reisch', 'Co-Founder & CEO', 'Daria holds a MSc degree in Business Development from Lucerne University and brings along 10+ years of experience in the agri-sector. Daria worked on topics related to sustainability of agricultural value chains and developed passion for fresh fruits’ quality optimisation during her hands-on experience with growers and exporters of fresh berries.')
+					+teamItem('img/team-nicolas.png', 'Nicolas Cepeda', 'Co-Founder', 'Nicolas holds a MSc in Computer Science from the University of Zurich. He is a serial entrepreneur, angel investor, and passionate coder. Nicolas taught himself to program when he was 11 years old. As a teenager he attended the Olympiad in Informatics for his homeland Argentina as well as for Switzerland.')
+					+teamItem('img/team-sharon.png', 'Dr. Sharon Wulff', 'Co-Founder', 'Sharon holds a PhD in Machine learning from ETH Zürich and has over 10 years of practical experience implementing cutting edge ML products both in start-ups and big companies. Sharon is passionate about driving commercial ML applications that generate true value for business.')
+					//- +teamItem('img/img-move/content/team-ava-4.png', 'Ilya Zinchenko', 'HR Manager')
+					//- +teamItem('img/img-move/content/team-ava-5.png', 'Sergey Filatov', 'Social Engineering')
+					//- +teamItem('img/img-move/content/team-ava-6.png', 'Alpamys Moldashev', 'Brand Designer')
+				.team__btns
+					p We think you'll fit in here. 
+					button.team__btn.btn.btn_primary 
+						| Submit your resume
+		
+		.jobs#jobs
+			.jobs__center.center
+				.jobs__wrap
+					.jobs__stage.stage <span class="stage__line" data-aos="animation-translate-right">We are hiring</span>
+						.stage__logo
+							img.stage__pic(src="img/logo-sm.png" alt="")
+					h2.jobs__title.title.title_big(data-aos="animation-scale-y" data-aos-offset="200") Jobs
+					.jobs__info(data-aos="animation-scale-y" data-aos-offset="300") 
+						| <strong>Agrinorm</strong> is a Swiss based deep tech company leveraging cutting edge machine 
+						| learning techniques for the optimization of fruit and veg supply chains. <br/><br/>
+						| Our team works remotely around-the-🌎
+					a.jobs__scroll.js-scroll(data-aos="animation-scale-y")
+						.jobs__icon
+							.jobs__arrows
+								img.jobs__pic(src="img/arrow-right.svg" alt="")
+								img.jobs__pic(src="img/arrow-right.svg" alt="")
+						.jobs__text Available <br>jobs
+				.jobs__list
+					a.jobs__item(href="javascript:void(0)" data-aos="animation-scale-y")
+						.jobs__inner
+							h5.jobs__vacancy.h5 Graphic Designer
+								.jobs__counter 2
+							.jobs__text 2 years experience
+							+i('arrow-next')
+							.jobs__preview
+								img.jobs__pic(src="img/jobs-pic-1.png" alt="")
+					a.jobs__item(href="javascript:void(0)" data-aos="animation-scale-y")
+						.jobs__inner
+							h5.jobs__vacancy.h5 ML Specialist
+							.jobs__text 2 years experience
+							+i('arrow-next')
+							.jobs__preview
+								img.jobs__pic(src="img/jobs-pic-1.png" alt="")
+					a.jobs__item(href="javascript:void(0)" data-aos="animation-scale-y")
+						.jobs__inner
+							h5.jobs__vacancy.h5 Marketing
+							.jobs__text 2 years experience
+							+i('arrow-next')
+							.jobs__preview
+								img.jobs__pic(src="img/jobs-pic-1.png" alt="")
+					a.jobs__item(href="javascript:void(0)" data-aos="animation-scale-y")
+						.jobs__inner
+							h5.jobs__vacancy.h5 JS Developer
+								.jobs__counter 2
+							.jobs__text 2 years experience
+							+i('arrow-next')
+							.jobs__preview
+								img.jobs__pic(src="img/jobs-pic-1.png" alt="")
+			.line(data-aos="animation-line" data-aos-offset="0")
+				svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+					path(fill="none" stroke="#9A97ED" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+		
+		.partners.bg1
+			.partners__center.center
+				h2.partners__title.h2(data-aos="animation-scale-top") Companies that have already trusted us
+				.partners__info.info Read reviews of popular companies that have already appreciated working with our team and are happy with the result.
+				.partners__list.js-slider-mobile.js-slider-resize.slider
+					.partners__item
+						.partners__logo
+							img(src="img/img-move/logo/kanba.svg" alt="")
+						.partners__text “The latest project from Agrinorm's team exceeded all expectations and will help many people”
+					.partners__item
+						.partners__logo
+							img(src="img/img-move/logo/aven.svg" alt="")
+						.partners__text “The latest project from Agrinorm's team exceeded all expectations and will help many people”
+					.partners__item
+						.partners__logo
+							img(src="img/img-move/logo/goldline.svg" alt="")
+						.partners__text “The latest project from Agrinorm's team exceeded all expectations and will help many people”

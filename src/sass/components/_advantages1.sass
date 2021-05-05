@@ -1,0 +1,113 @@
+.advantages1
+	+m
+		padding: 80px 0 85px 
+	&__row
+		position: relative
+		display: flex
+		align-items: center
+		min-height: 1103px
+		padding: 100px 0 
+		+x
+			min-height: 1040px
+		+d
+			min-height: 840px
+		+m
+			display: block
+			min-height: auto
+			padding: 0 
+			+nl
+				margin-bottom: 90px
+	&__wrap
+		position: relative
+		z-index: 3
+		+m
+			margin-top: -10px
+	&__row:first-child &__wrap
+		max-width: 530px
+		margin-left: auto
+		+d
+			max-width: 360px
+		+m
+			max-width: 100% 
+	&__row:first-child &__preview
+		top: 50%
+		left: calc(50% - 657px)
+		transform: translateY(-43%) 
+		+x
+			left: calc(50% - 660px)
+		+d
+			left: calc(50% - 440px)
+			width: 430px
+		+t
+			left: calc(50% - 400px)
+			width: 370px
+		+m
+			transform: translateY(0)
+			margin: 0 auto 
+		+a
+			width: auto
+			margin: 0 -64px
+	&__row:nth-child(2) &__wrap
+		max-width: 527px
+		+d
+			max-width: 360px
+	&__row:nth-child(2) &__preview
+		top: 53%
+		right: calc(50% - 650px) 
+		transform: translateY(-45%)
+		+x
+			right: calc(50% - 660px)
+		+d
+			right: calc(50% - 480px)
+			width: 480px
+		+t
+			right: calc(50% - 460px)
+			width: 430px
+		+m
+			margin: 0 auto
+			transform: translateY(0)
+		+a
+			width: auto
+			margin: 0 -64px 
+	&__title
+		margin-bottom: 33px
+		+m
+			margin-bottom: 24px
+	&__info
+		margin-bottom: 36px
+	&__item
+		display: flex
+		+nl
+			margin-bottom: 33px
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0 
+		width: 74px
+		height: 74px
+		margin-right: 32px
+		border-radius: 50%
+		+d
+			margin-right: 20px
+	&__category
+		margin-bottom: 23px
+		+h8
+		font-weight: 600 
+		+d
+			margin-bottom: 16px
+			font-size: 20px
+			line-height: 1.6
+	&__text
+		line-height: 2
+		color: $text3
+		+d
+			font-size: 16px
+	&__preview
+		position: absolute
+		z-index: -1
+		+m
+			position: static
+		img
+			+d
+				width: 100% 

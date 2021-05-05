@@ -1,0 +1,74 @@
+.quality2
+	padding: 123px 0 124px
+	+d
+		padding: 93px 0
+	&__title
+		margin-bottom: 35px
+		text-align: center
+		+d
+			margin-bottom: 25px
+		+m
+			text-align: left
+	&__info
+		max-width: 810px
+		margin: 0 auto 81px
+		text-align: center
+		+d
+			max-width: 690px
+			margin-bottom: 36px
+		+m
+			max-width: 100%
+			text-align: left 
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: -36px -16px 0
+		+d
+			margin: -28px -10px 0 
+		+m
+			display: block
+			margin: 0
+	&__item
+		flex: 0 0 calc(50% - 32px)
+		width: calc(50% - 32px)
+		margin: 36px 16px 0
+		padding: 32px 32px 24px
+		border-radius: 15px
+		background: $white
+		transition: box-shadow .2s
+		+d
+			flex: 0 0 calc(50% - 20px)
+			width: calc(50% - 20px)
+			margin: 28px 10px 0
+			padding: 32px 28px 
+		+m
+			width: 100%
+			margin: 0
+			padding: 32px 
+			+nl
+				margin-bottom: 27px
+		&:hover
+			+shadow4
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 80px
+		height: 80px
+		margin-bottom: 29px
+		border-radius: 50%
+	&__category
+		margin-bottom: 21px
+		+h6
+		font-weight: 700
+		+m
+			margin-right: -10px 
+	&__text
+		color: $text3
+
++dark
+	.quality2
+		&__item
+			background: $dark2
+			&:hover
+				+shadow4-dark

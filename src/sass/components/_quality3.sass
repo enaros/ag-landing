@@ -1,0 +1,87 @@
+.quality3
+	padding: 108px 0 119px
+	+d
+		padding: 90px 0 
+	+m
+		padding: 75px 0 86px
+	&__title
+		margin-bottom: 35px
+		text-align: center
+		+d
+			margin-bottom: 25px
+		+m
+			text-align: left
+		&_mb75
+			margin-bottom: 75px
+			+t
+				margin-bottom: 55px
+		&_big
+			+d
+				font-size: 48px
+			+m
+				font-size: 40px
+	&__info
+		max-width: 780px
+		margin: 0 auto 83px
+		text-align: center
+		+d
+			max-width: 690px
+			margin-bottom: 40px
+		+m
+			max-width: 100%
+			text-align: left 
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: -42px -16px 0
+		+d
+			margin: -30px -11px 0 
+		+m
+			display: block
+			margin: 0
+	&__item
+		flex: 0 0 calc(33.33% - 32px)
+		width: calc(33.33% - 32px)
+		margin: 42px 16px 0
+		padding: 32px
+		border-radius: 15px
+		background: $white
+		transition: box-shadow .2s
+		+d
+			flex: 0 0 calc(50% - 22px)
+			width: calc(50% - 22px)
+			margin: 32px 11px 0
+		+m
+			width: 100%
+			margin: 0
+		+nl
+			+m
+				margin-bottom: 28px
+		&:hover
+			+shadow4
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 80px
+		height: 80px
+		margin-bottom: 29px
+		border-radius: 50%
+	&__category
+		margin-bottom: 21px
+		+h6
+		font-weight: 700 
+		+m
+			margin-bottom: 15px
+			line-height: (40/28) 
+	&__text
+		color: $text3
+	.more
+		margin-top: 16px
+
++dark
+	.quality3
+		&__item
+			background: $dark2
+			&:hover
+				+shadow4-dark

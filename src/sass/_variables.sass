@@ -1,0 +1,154 @@
+=w
+  @media only screen and (max-width: "1599px")
+    @content
+=x
+  @media only screen and (max-width: "1439px")
+    @content
+=mac
+  @media only screen and (max-width: "1365px")
+    @content
+=d
+  @media only screen and (max-width: "1279px")
+    @content
+=t
+  @media only screen and (max-width: "1023px")
+    @content
+=m
+  @media only screen and (max-width: "767px")
+    @content
+=a
+  @media only screen and (max-width: "639px")
+    @content
+=s
+  @media only screen and (max-width: "474px")
+    @content
+
+@font-face 
+  font-family: 'SF Pro Display'
+  src: url('fonts/SFProDisplay-Regular.woff') format('woff'), url('fonts/fonts/SFProDisplay-Regular.woff2') format('woff2')
+  font-weight: 400
+  font-style: normal
+
+@font-face 
+  font-family: 'SF Pro Display'
+  src: url('fonts/SFProDisplay-Semibold.woff') format('woff'), url('fonts/fonts/SFProDisplay-Semibold.woff2') format('woff2')
+  font-weight: 600
+  font-style: normal
+
+@font-face 
+  font-family: 'SF Pro Display'
+  src: url('fonts/SFProDisplay-Bold.woff') format('woff'), url('fonts/fonts/SFProDisplay-Bold.woff2') format('woff2')
+  font-weight: 700
+  font-style: normal
+
+$bl: #000000
+$dark: #232340
+$wh: #ffffff
+$white: $wh
+
+$aubergine: #4A154B
+$purple: $aubergine
+$text-dark: #8B8B8B
+$text-light: #606060
+$text-white: #BBBBBB
+$pink: rgb(228, 48, 126)
+
+$gray-light: #ECF2F6
+$yellow: #ECB22E
+$red: #E01E5A
+$green: #53B175
+$blue: #5468E7
+
+$primary: $blue
+$secondary: $green
+
+
+=font-family
+  // font-family: 'Poppins', sans-serif
+  font-family: 'SF Pro Display', sans-serif
+
+// ------------------------------------------------------
+// from move
+// ------------------------------------------------------
+=shadow4
+	box-shadow: 0px 50px 77px rgba(176, 183, 195, 0.22)
+
+=shadow4-dark
+	box-shadow: 0px 50px 77px rgba(14, 15, 17, 0.63)
+
+=dark
+  body.dark
+    @content
+
+$text1: #323B4B
+$text2: #4E5D78
+$text3: #8A94A6
+$text4: #B0B7C3
+
+$bg1: #C1C7D0
+$bg2: #F3F3F3
+$bg3: #FAFBFC
+
+
+$dark1: #383A43
+$dark2: #2A2C34
+$dark3: #1E2029
+$dark4: #12141D
+
+=h1
+	font-size: 76px
+  line-height: (92/76) 
+
+=h2
+	font-size: 64px
+  line-height: (72/64) 
+  // +d
+  //   font-size: 48px
+  //   line-height: (56/48) 
+  // +m
+  //   font-size: 40px
+  //   line-height: (48/40)
+
+=h3
+	font-size: 48px
+  line-height: (56/48)
+
+=h4
+	font-size: 40px
+  line-height: (48/40)
+  letter-spacing: -.4px
+  // +d
+  //   font-size: 32px
+  //   line-height: (40/32)
+  //   letter-spacing: -.5px 
+  // +m
+  //   font-size: 24px
+  //   line-height: (32/24)
+  //   letter-spacing: -.2px   
+
+=h5
+	font-size: 32px
+  line-height: (40/32)
+  letter-spacing: -.5px 
+  // +d
+  //   font-size: 24px
+  //   line-height: (32/24)
+  //   letter-spacing: -.2px 
+
+=h6
+	font-size: 24px
+  line-height: (32/24)
+  letter-spacing: -.2px  
+  // +d
+  //   font-size: 18px
+  //   line-height: (24/18) 
+
+=h7
+	font-size: 26px
+	line-height: (31/26) 
+
+=h8
+	font-size: 24px
+	line-height: (29/24)
+
+// ------------------------------------------------------

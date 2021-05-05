@@ -1,0 +1,67 @@
+.main5
+	position: relative
+	padding: 0 0 124px 0 
+	+d
+		padding: 105px 0 
+	+t
+		padding: 90px 0
+	+m
+		padding: 70px 0 
+	&__row
+		display: flex
+		align-items: center
+		margin: 0 -15px
+		+m
+			display: block
+			margin: 0
+	&__col
+		flex: 0 0 calc(50% - 30px)
+		width: calc(50% - 30px)
+		margin: 0 15px
+		+m
+			width: 100%
+			margin: 0
+			&:first-child
+				margin-bottom: 60px
+	&__preview
+		position: relative
+		// +shadow4
+		// overflow: hidden
+		img
+			border-radius: 15px 
+			width: 100% 
+	&__play
+		top: 46px
+		left: 44px
+		+t
+			top: 25px
+			left: 25px 
+	&__col:first-child &__wrap
+		padding-right: 105px
+		+w
+			padding-right: 60px
+		+d
+			padding-right: 40px
+		+t
+			padding-right: 0
+	&__col:nth-child(2) &__wrap
+		padding-left: 105px
+		+w
+			padding-left: 60px
+		+d
+			padding-left: 40px
+		+t
+			padding-left: 0
+	&__title
+		margin-bottom: 31px
+		+t
+			margin-bottom: 25px
+	&__info
+		+nl
+			margin-bottom: 29px
+
++dark
+	.main5
+		&__preview
+			+shadow4-dark
+	

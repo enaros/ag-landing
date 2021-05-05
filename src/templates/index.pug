@@ -1,0 +1,629 @@
+---
+title: Agrinorm
+---
+extends layouts/_layout
+block content
+	.main
+		+header('active')
+		.main__center.center
+			.main__wrap
+				h1.main__title.title(data-aos)
+					p <span>Smart</span> <span>Quality</span>
+					p <span>Management</span>
+					p <span>Platform.</span>
+				.main__info(data-aos="animation-translate-up" data-aos-delay="200") We help fresh produce suppliers exceed customer expectations while reducing claims and waste.
+				.main__btn(data-aos="animation-translate-up" data-aos-delay="400")
+					button.btn.btn_primary Contact Us
+				a.main__scroll.js-scroll(href="#details" data-aos="animation-translate-up" data-aos-delay="1000")
+					.main__icon
+						.main__arrows
+							img.main__pic(src="img/arrow-down.svg" alt="")
+							img.main__pic(src="img/arrow-down.svg" alt="")
+					.main__text Scroll down
+			.main__bg(data-aos)
+				// phone
+				.main__preview 
+					img.main__pic.js-parallax(data-scale="1.4" data-orientation="up" src="img/main-pic-1.png" alt="")
+				// pie chart
+				.main__preview
+					img.main__pic.js-parallax(data-scale="1.2" data-orientation="down" src="img/main-pic-2.png" alt="")
+				// bar chart
+				.main__preview
+					img.main__pic.js-parallax(data-scale="1.2" data-orientation="up" src="img/main-pic-3.png" alt="")
+				// hand
+				.main__preview
+					//- img.main__pic.js-parallax(data-scale="0.8" data-orientation="down" src="img/main-pic-4.png" alt="")
+				// blue triangle
+				.main__preview
+					img.main__pic.js-parallax(data-scale="1.2" data-orientation="right" src="img/case-figure.svg" alt="")
+					//- img.main__pic.js-parallax(data-scale="1.2" data-orientation="right" src="img/main-pic-5.svg" alt="")
+				// grid
+				.main__preview
+					//- img.main__pic.js-parallax(data-scale="1.4" data-orientation="down" src="img/main-pic-6.png" alt="")
+				// apple
+				.main__preview
+					img.main__pic.js-parallax(data-scale="1.3" data-orientation="down" src="img/main-pic-7.png" alt="")
+		.line
+			svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="642" height="820")
+				path.path(fill="none" stroke="#d1ecfd" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+	
+	.details.js-details#details
+		.bg
+			.bg__preview
+				img.bg__pic.js-parallax(data-scale="1.3" data-orientation="left" src="img/bg.svg" alt="")
+		.details__center.center
+			.details__head.head
+				.head__box
+					.head__stage.stage(data-aos="animation-translate-right") 
+						span.stage__number 01.
+						| What we do
+						.stage__logo
+							img.stage__pic(src="img/logo-sm.png" alt="")
+					h2.head__title.h2(data-aos="animation-scale-y" data-aos-delay="200")
+						| We are working towards efficient, fair, <span>no-waste</span> value chains.
+				.head__arrows.arrows.arrows_white(data-aos="animation-scale-y" data-aos-delay="400")
+					button.arrows__prev.js-prev
+						+i('arrow-prev')
+					button.arrows__next.js-next
+						+i('arrow-next')
+				//- select.head__select.js-details-select
+					option 2017
+					option 2018
+					option 2019
+					option(selected) 2020
+					option 2021
+			//- .details__body
+				.details__years(data-aos="animation-translate-right")
+					.details__year.js-details-year culomatic 
+						.details__line
+							.details__dot
+					.details__year.js-details-year 2018
+						.details__line
+							.details__dot
+					.details__year.js-details-year 2019
+						.details__line
+							.details__dot
+					.details__year.js-details-year.active 2020
+						.details__line
+							.details__dot
+					.details__year.js-details-year 2021
+						.details__line
+							.details__dot
+				.details__container(data-aos="animation-translate-up")
+					.details__inner
+						.details__slider.js-details-slider
+							.details__preview
+								img.details__pic(src="img/details-pic-1.png" alt="")
+								| culo
+							.details__preview
+								img.details__pic(src="img/details-pic-2.png" alt="")
+								| teta
+							.details__preview
+								img.details__pic(src="img/details-pic-3.png" alt="")
+							.details__preview
+								img.details__pic(src="img/details-pic-1.png" alt="")
+							.details__preview
+								img.details__pic(src="img/details-pic-2.png" alt="")
+			.details__foot
+				.details__wrap
+					h5.details__info.h5(data-aos="animation-scale-y")
+						| Fresh fruit and vegetable quality control methods have been mostly manual, 
+						| subjective and inefficient.
+					.details__text(data-aos="animation-scale-y" data-aos-delay="200") 
+						br
+						//- br
+						| <strong>Agrinorm's</strong> platform supports you in making informed, data driven decisions on 
+						| a daily basis. Track important metrics of profit drivers, learn from your past 
+						| decisions and use our unique predictions of quality evolution and customer 
+						| claims to optimize for your business success.
+					.details__btn(data-aos="animation-scale-y" data-aos-delay="400")
+						button.btn.btn_secondary Try our solution
+				.details__counter(data-aos)
+					.details__front
+					.details__back
+						.details__number.number(data-aos) <span>5</span><span>0 <span class="number__plus">%<span></span>
+						.details__category.h6 less waste and claims* 
+		.line(data-aos="animation-line" data-aos-offset="0")
+			svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+				path(fill="none" stroke="#323259" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+
+	//- .features.js-features(data-aos)
+		.features__center.center
+			.features__head(data-aos="animation-scale-y")
+				.features__stage.stage Who we are
+				.features__box
+					h2.head__title.features__title.h2 The world's most advanced quality management app.
+					.features__info.info 
+						| No more scattered quality information over pdfs, email and text messages in 
+						| different channels. Agrinorm lets you manage and communicate quality 
+						| information within your organization as well as with your suppliers and 
+						| customers, all in the same place!
+					.features__info.info 
+						| Running a business in fresh leaves you constantly evaluating risks. 
+						| Agrinorm's platform supports you in making informed, data driven decisions on 
+						| a daily basis. Track important metrics of profit drivers, learn from your past 
+						| decisions and use our unique predictions of quality evolution and customer 
+						| claims to optimize for your business success
+			//- .features__body
+				.features__container
+					.features__slider.js-features-slider
+						.features__slide(data-aos="animation-scale-y")
+							.features__details
+								.features__preview
+									img.features__pic(src="img/img2/camera.png" alt="")
+								.features__category Import Photos & Videos
+								.features__text Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.
+								a.features__link(href="#") Find out more
+						.features__slide(data-aos="animation-scale-y" data-aos-delay="200")
+							.features__details
+								.features__preview
+									img.features__pic(src="img/img2/calendar.png" alt="")
+								.features__category Calendar API Built-In
+								.features__text Kickstart your design process for a wide variety of apps such as calendar, analytics, virtual assistant, file manager.
+								a.features__link(href="#") Find out more
+						.features__slide
+							.features__details
+								.features__preview
+									img.features__pic(src="img/img2/camera.png" alt="")
+								.features__category Import Photos & Videos
+								.features__text Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.
+								a.features__link(href="#") Find out more
+						.features__slide
+							.features__details
+								.features__preview
+									img.features__pic(src="img/img2/calendar.png" alt="")
+								.features__category Calendar API Built-In
+								.features__text Kickstart your design process for a wide variety of apps such as calendar, analytics, virtual assistant, file manager.
+								a.features__link(href="#") Find out more
+						.features__slide
+							.features__details
+								.features__preview
+									img.features__pic(src="img/img2/camera.png" alt="")
+								.features__category Import Photos & Videos
+								.features__text Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.
+								a.features__link(href="#") Find out more
+				//- .features__status.js-features-status
+		.features__circle.js-parallax(data-scale="1.3" data-orientation="down" )
+		.features__image.js-parallax(data-scale="1.4" data-orientation="up" )
+			img(src="img/deep-learning.png" alt="")
+		.features__bg(data-aos data-aos-duration="1000")
+			img.features__pic(src="img/img2/features-pic-1.svg" alt="")
+	
+	.speed
+		.speed__center.center
+			.speed__wrap
+				.speed__head(data-aos="animation-scale-y")
+					.head__box
+						.head__stage.stage(data-aos="animation-translate-right")
+							span.stage__number 02.
+							| How we do it
+							.stage__logo
+								img.stage__pic(src="img/logo-sm.png" alt="")
+						h2.speed__title.h2 
+							| Capture and <br>communicate <br>quality<span class="title__color">.</span>
+					.speed__text 
+						| Efficiently collect and safely exchange quality related information with 
+						|	<strong>Agrinorm's</strong> quality control app.
+				.speed__number(data-aos="animation-scale-y") 
+					| <span>8.5</span>x
+					div.faster faster
+		.speed__line
+			img.speed__pic(src="img/img2/line.svg" alt="")
+		.speed__preview(data-aos)
+			.speed__graphic
+				img.speed__pic(src="img/iphone-white.png" alt="")
+			.speed__plant
+				img.speed__pic.js-parallax(data-scale="1.3" data-orientation="left" src="img/img2/plant.png" alt="")
+		.speed__circles
+			.speed__circle.js-rellax(data-rellax-speed="-1")
+			.speed__circle.js-rellax(data-rellax-speed="1")
+			.speed__circle
+
+	.quality#quality
+		.bg
+			.bg__preview
+				img.bg__pic.js-parallax(data-scale="1.3" data-orientation="left" src="img/bg.svg" alt="")
+		.quality__center.center
+			.quality__head.head
+				.head__box
+					.head__stage.stage <span class="stage__line" data-aos="animation-translate-right"><span class="stage__number">03.</span> Our solution</span>
+						.stage__logo
+							img.stage__pic(src="img/logo-sm-white.png" alt="")
+					h2.head__title.h2(data-aos="animation-scale-y" data-aos-delay="200") By the Numbers.
+			.quality__list
+				.quality__item
+					.quality__number.number(data-aos) <span>5</span><span>0 <span class="number__plus">%<span></span>
+					.quality__category.h6(data-aos="animation-scale-y" data-aos-delay="200") Less waste *
+					.quality__info(data-aos="animation-scale-y" data-aos-delay="400") 
+						| Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae neque ad at, consequuntur nam quaerat fugit error voluptatibus quasi vel soluta iste sint harum eos eveniet fuga consequatur debitis ipsam.
+					a.quality__download(href="javascript:void(0)" data-aos="animation-scale-y" data-aos-delay="600")
+						.quality__icon
+							.quality__arrows
+								img.quality__pic(src="img/arrow-down.svg" alt="")
+								img.quality__pic(src="img/arrow-down.svg" alt="")
+						.quality__text See how 
+				.quality__item
+					.quality__number.number(data-aos) <span>4</span><span>0 <span class="number__plus">%<span></span>
+					.quality__category.h6(data-aos="animation-scale-y" data-aos-delay="200") Less claims *
+					.quality__info(data-aos="animation-scale-y" data-aos-delay="400") 
+						| Fresh produce quality methods are not standardized and are subject 
+						| to different inspection standards for different buyers. <br>
+						| This leads to frequent quality mismatches across the fresh produce supply chain.
+					a.quality__download(href="javascript:void(0)" data-aos="animation-scale-y" data-aos-delay="200")
+						.quality__icon
+							.quality__arrows
+								img.quality__pic(src="img/arrow-down.svg" alt="")
+								img.quality__pic(src="img/arrow-down.svg" alt="")
+						.quality__text Find out more 
+			//- .quality__nav(data-aos="animation-translate-up")
+				a.quality__link(href="#") Overview
+				a.quality__link.active(href="#") Features
+				a.quality__link(href="#") Highlights
+				a.quality__link(href="#") Compatibility
+			//- .quality__container(data-aos="animation-translate-up")
+				select.quality__select.js-details-select
+					option Overview
+					option Features
+					option Highlights
+					option Compatibility
+				.quality__slider.js-quality-slider
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-1.png" alt="")
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-2.png" alt="")
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-3.png" alt="")
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-1.png" alt="")
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-2.png" alt="")
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-3.png" alt="")
+		.line(data-aos="animation-line" data-aos-offset="0")
+			svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+				path(fill="none" stroke="#323259" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+
+	
+
+	//- .showcase.bg1
+		.showcase__center.center
+			.showcase__wrap
+				.showcase__top(data-aos="animation-scale-y")
+					.head__stage.stage(data-aos="animation-translate-right") <span class="stage__number">04.</span> Who We Are
+						.stage__logo
+							img.stage__pic(src="img/logo-sm.png" alt="")
+					h2.showcase__title.h2 Created with Collab<span class="title__color">.</span>
+				.showcase__info.info(data-aos="animation-scale-y" data-aos-delay="150") See what designers around the world are building with Collab.
+				.showcase__btn(data-aos="animation-scale-y" data-aos-delay="300")
+					button.btn.btn_primary View More Projects
+		.showcase__bg.js-rellax(data-rellax-speed="-2")
+			img.showcase__pic(src="img/img2/showcase-circle.svg" alt="")
+		.showcase__circles
+			.showcase__circle
+			.showcase__circle
+		.showcase__list
+			.showcase__preview
+				img.showcase__pic.js-parallax(data-scale="1.3" data-orientation="right" src="img/img2/group-1.png" alt="")
+			.showcase__preview
+				img.showcase__pic.js-parallax(data-scale="1.3" data-orientation="left" src="img/img2/group-2.png" alt="")
+	
+	//- .advantages
+		.advantages__center.center
+			.advantages__wrap
+				.advantages__stage.stage <span class="stage__line" data-aos="animation-translate-right"><span class="stage__number">03.</span> Visual Identity</span>
+					.stage__logo
+						img.stage__pic(src="img/logo-sm-pink.png" alt="")
+				h2.advantages__title.h2(data-aos="animation-scale-y" data-aos-delay="200") Evolving the look & feel.
+				.advantages__info(data-aos="animation-scale-y" data-aos-delay="400") Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+				.advantages__number.number(data-aos) <span>8</span><span>0 <span class="number__plus">+<span></span>
+				.advantages__category.h6(data-aos="animation-scale-y" data-aos-delay="200") UI Elements
+			.advantages__box(data-aos="animation-translate-up")
+				.advantages__inner
+					.advantages__list
+						.advantages__item(data-aos="animation-scale-y")
+							.advantages__preview
+								img.advantages__pic(src="img/advantages-pic-1.png" alt="")
+							.advantages__text.h6 Auto-updatable Global Styleguide
+						.advantages__item(data-aos="animation-scale-y")
+							.advantages__preview
+								img.advantages__pic(src="img/advantages-pic-2.png" alt="")
+							.advantages__text.h6 The number of applications and use cases is nearly endless.
+						.advantages__item(data-aos="animation-scale-y")
+							.advantages__preview
+								img.advantages__pic(src="img/advantages-pic-3.png" alt="")
+							.advantages__text.h6 Auto-updatable Global Styleguide
+					.advantages__btn
+						button.btn.btn_primary(data-aos="animation-scale-y" data-aos-delay="200") Contact Us
+		.line(data-aos="animation-line" data-aos-offset="0")
+			svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+				path(fill="none" stroke="#9A97ED" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+
+	.wrapper
+		.lines
+			.line(data-aos="animation-line" data-aos-offset="0")
+				svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+					path(fill="none" stroke="#9A97ED" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+			//- .line(data-aos="animation-line" data-aos-offset="0")
+			//- 	svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+			//- 		path(fill="none" stroke="#9A97ED" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+		
+		//- .work.js-work
+			.work__center.center
+				.work__head.head
+					.head__box
+						.head__stage.stage <span class="stage__line" data-aos="animation-translate-right"><span class="stage__number">02.</span> What We Do</span>
+							.stage__logo
+								img.stage__pic(src="img/logo-sm.png" alt="")
+						h2.head__title.h2(data-aos="animation-scale-y" data-aos-delay="200") We Make Designs that Lead and Inpire.
+					.head__arrows.arrows(data-aos="animation-scale-y" data-aos-delay="400")
+						button.arrows__prev.js-prev
+							+i('arrow-prev')
+						button.arrows__next.js-next
+							+i('arrow-next')
+				.work__inner(data-aos="animation-translate-up")
+					.work__container
+						.work__slider.js-work-slider
+							.work__slide
+								.work__item
+									.work__preview
+										img.work__pic(src="img/work-pic-1.png" alt="")
+									h6.work__category.h6 Strategy
+							.work__slide
+								.work__item
+									.work__preview
+										img.work__pic(src="img/work-pic-2.png" alt="")
+									h6.work__category.h6 Branding
+							.work__slide
+								.work__item
+									.work__preview
+										img.work__pic(src="img/work-pic-3.png" alt="")
+									h6.work__category.h6 Interactive
+							.work__slide
+								.work__item
+									.work__preview
+										img.work__pic(src="img/work-pic-4.png" alt="")
+									h6.work__category.h6 Communicate
+							.work__slide
+								.work__item
+									.work__preview
+										img.work__pic(src="img/work-pic-5.png" alt="")
+									h6.work__category.h6 Copywriting
+							.work__slide
+								.work__item
+									.work__preview
+										img.work__pic(src="img/work-pic-6.png" alt="")
+									h6.work__category.h6 Web Design
+							.work__slide
+								.work__item
+									.work__preview
+										img.work__pic(src="img/work-pic-7.png" alt="")
+									h6.work__category.h6 Mobile App
+							.work__slide
+								.work__item
+									.work__preview
+										img.work__pic(src="img/work-pic-8.png" alt="")
+									h6.work__category.h6 Motion Design
+		
+		.achievement
+			.achievement__center.center
+				.achievement__container
+					.achievement__slider.js-achievement-slider
+						.achievement__slide
+							.achievement__group
+								.achievement__preview
+									img.achievement__pic(src="img/iphone-white.png" alt="")
+								.achievement__preview
+									img.achievement__pic.js-parallax(data-scale="1.3" data-orientation="up" src="img/achievement-pic-2.svg" alt="")
+								.achievement__preview
+									img.achievement__pic.js-parallax(data-scale="1.4" data-orientation="down" src="img/achievement-pic-3.png" alt="")
+						//- .achievement__slide
+						//- 	.achievement__group
+						//- 		.achievement__preview
+						//- 			img.achievement__pic(src="img/achievement-pic-1.png" alt="")
+						//- 		.achievement__preview
+						//- 			img.achievement__pic(src="img/achievement-pic-2.svg" alt="")
+						//- 		.achievement__preview
+						//- 			img.achievement__pic(src="img/achievement-pic-3.png" alt="")
+						//- .achievement__slide
+						//- 	.achievement__group
+						//- 		.achievement__preview
+						//- 			img.achievement__pic(src="img/achievement-pic-1.png" alt="")
+						//- 		.achievement__preview
+						//- 			img.achievement__pic(src="img/achievement-pic-2.svg" alt="")
+						//- 		.achievement__preview
+						//- 			img.achievement__pic(src="img/achievement-pic-3.png" alt="")
+				.achievement__wrap
+					.achievement__stage.stage 
+						| <span class="stage__line" data-aos="animation-translate-right"><span class="stage__number">04.</span> Advanced data visualization</span>
+						.stage__logo
+							img.stage__pic(src="img/logo-sm.png" alt="")
+					h2.achievement__title.h2(data-aos="animation-scale-y" data-aos-delay="200") 
+						| Unlock the potential of data
+					.achievement__text 
+						| Consult our platform to make smart commercial decisions such as sourcing, 
+						| product allocation, claim prevention or storage and manipulation.
+					//- .achievement__number.number(data-aos) <span>6</span><span>8</span>
+					//- .achievement__info.h6(data-aos="animation-scale-y" data-aos-delay="600") <span>😎</span>Successful Projects
+	
+	//- .projects
+		.projects__center.center
+			.projects__head.head
+				.head__box
+					.head__stage.stage <span class="stage__line" data-aos="animation-translate-right"><span class="stage__number">04.</span> Famous Projects</span>
+						.stage__logo
+							img.stage__pic(src="img/logo-sm.png" alt="")
+					h2.head__title.h2(data-aos="animation-scale-y" data-aos-delay="200") Our Partnerships
+					.head__text(data-aos="animation-scale-y" data-aos-delay="400") Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+				.head__btns(data-aos="animation-scale-y" data-aos-delay="400")
+					button.head__btn.btn.btn_primary Contact Us
+			.projects__body
+				.projects__desc
+					.projects__category.category(data-aos="animation-scale-y") Featured Product
+					h4.projects__info.h4(data-aos="animation-scale-y" data-aos-delay="200") Sapiens: The Free Character Builder App.
+					.projects__text(data-aos="animation-scale-y" data-aos-delay="400") Beautiful library of modular, component-based character illustrations free to use for all your personal or client projects.
+					a.projects__arrow.arrow(data-aos="animation-scale-y" data-aos-delay="600" href="case.html")
+						.arrow__line
+							+i('arrow-next')
+							+i('arrow-next')
+				.projects__preview
+					a.projects__view(href="#") view
+					a.projects__arrow.arrow(href="case.html")
+						.arrow__line
+							+i('arrow-next')
+							+i('arrow-next')
+					.projects__img
+						img.projects__pic.js-parallax(data-scale="1.3" data-orientation="up" src="img/projects-pic-1.png" alt="")
+			.projects__list
+				.projects__item
+					h4.projects__info.h4(data-aos="animation-scale-y") Bento Vol. 2
+					.projects__preview
+						.projects__img
+							img.projects__pic.js-parallax(data-scale="1.3" data-orientation="right" src="img/projects-pic-2.png" alt="")
+						a.projects__arrow.arrow(href="case.html")
+							.arrow__line
+								+i('arrow-next')
+								+i('arrow-next')
+					.projects__text(data-aos="animation-scale-y" data-aos-offset="200") Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+					a.projects__arrow.arrow(data-aos="animation-scale-y" data-aos-delay="400" href="case.html")
+						.arrow__line
+							+i('arrow-next')
+							+i('arrow-next')
+				.projects__item
+					h4.projects__info.h4(data-aos="animation-scale-y") Bento 3D Illustration
+					.projects__preview
+						.projects__img
+							img.projects__pic.js-parallax(data-scale="1.3" data-orientation="up" src="img/projects-pic-3.png" alt="")
+						a.projects__arrow.arrow(href="case.html")
+							.arrow__line
+								+i('arrow-next')
+								+i('arrow-next')
+					.projects__text(data-aos="animation-scale-y" data-aos-offset="200") Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+					a.projects__arrow.arrow(data-aos="animation-scale-y" data-aos-delay="400" href="case.html")
+						.arrow__line
+							+i('arrow-next')
+							+i('arrow-next')
+				.projects__item
+					h4.projects__info.h4(data-aos="animation-scale-y") Bento Vol. 3
+					.projects__preview
+						.projects__img
+							img.projects__pic.js-parallax(data-scale="1.2" data-orientation="down" src="img/projects-pic-4.png" alt="")
+						a.projects__arrow.arrow(href="case.html")
+							.arrow__line
+								+i('arrow-next')
+								+i('arrow-next')
+					.projects__text(data-aos="animation-scale-y" data-aos-offset="200") Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+					a.projects__arrow.arrow(data-aos="animation-scale-y" data-aos-delay="400" href="case.html")
+						.arrow__line
+							+i('arrow-next')
+							+i('arrow-next')
+				.projects__item
+					h4.projects__info.h4(data-aos="animation-scale-y") Sapiens: Man
+					.projects__preview
+						.projects__img
+							img.projects__pic.js-parallax(data-scale="1.4" data-orientation="up" src="img/projects-pic-5.png" alt="")
+						a.projects__arrow.arrow(href="case.html")
+							.arrow__line
+								+i('arrow-next')
+								+i('arrow-next')
+					.projects__text(data-aos="animation-scale-y" data-aos-offset="200") Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+					a.projects__arrow.arrow(data-aos="animation-scale-y" data-aos-delay="400" href="case.html")
+						.arrow__line
+							+i('arrow-next')
+							+i('arrow-next')
+			.projects__btn(data-aos="animation-scale-y")
+				button.btn.btn_primary Contact Us
+		.lines
+			.line(data-aos="animation-line" data-aos-offset="0")
+				svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+					path(fill="none" stroke="#9A97ED" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+			.line(data-aos="animation-line" data-aos-offset="0")
+				svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+					path(fill="none" stroke="#9A97ED" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+	
+	//- .talent
+		.talent__center.center
+			.talent__container
+				.talent__bg(data-aos data-aos-offset="0")
+					.talent__preview
+						img.talent__pic(src="img/talent-pic-1.png" alt="")
+					.talent__preview
+						img.talent__pic(src="img/talent-pic-2.png" alt="")
+					.talent__preview
+						img.talent__pic(src="img/talent-pic-3.png" alt="")
+					.talent__preview
+						img.talent__pic(src="img/talent-pic-4.png" alt="")
+					.talent__preview
+						img.talent__pic(src="img/logo-sm-pink.png" alt="")
+				.talent__wrap
+					.talent__stage.stage(data-aos="animation-translate-right") <span class="stage__number">05.</span> Call to action
+					h2.talent__title.h2(data-aos="animation-scale-y" data-aos-offset="200") We Are Looking for Talented Designers
+					.talent__btn(data-aos="animation-scale-y" data-aos-offset="400")
+						button.btn.btn_white Apply Now
+				.talent__figure
+					img.talent__pic.js-parallax(data-scale="1.3" data-orientation="right" src="img/talent-figure.svg" alt="")
+	
+	.jobs#jobs
+		.jobs__center.center
+			.jobs__wrap
+				.jobs__stage.stage <span class="stage__line" data-aos="animation-translate-right">We are hiring</span>
+					.stage__logo
+						img.stage__pic(src="img/logo-sm.png" alt="")
+				h2.jobs__title.title.title_big(data-aos="animation-scale-y" data-aos-offset="200") Jobs
+				.jobs__info(data-aos="animation-scale-y" data-aos-offset="300") 
+					| <strong>Agrinorm</strong> is a Swiss based deep tech company leveraging cutting edge machine 
+					| learning techniques for the optimization of fruit and veg supply chains. <br/><br/>
+					| Our team works remotely around-the-🌎
+				a.jobs__scroll.js-scroll(data-aos="animation-scale-y" href="#")
+					.jobs__icon
+						.jobs__arrows
+							img.jobs__pic(src="img/arrow-right.svg" alt="")
+							img.jobs__pic(src="img/arrow-right.svg" alt="")
+					.jobs__text Available <br>jobs
+			.jobs__list
+				a.jobs__item(href="#" data-aos="animation-scale-y")
+					.jobs__inner
+						h5.jobs__vacancy.h5 Graphic Designer
+							.jobs__counter 2
+						.jobs__text 2 years experience
+						+i('arrow-next')
+						.jobs__preview
+							img.jobs__pic(src="img/jobs-pic-1.png" alt="")
+				a.jobs__item(href="#" data-aos="animation-scale-y")
+					.jobs__inner
+						h5.jobs__vacancy.h5 ML Specialist
+						.jobs__text 2 years experience
+						+i('arrow-next')
+						.jobs__preview
+							img.jobs__pic(src="img/jobs-pic-1.png" alt="")
+				a.jobs__item(href="#" data-aos="animation-scale-y")
+					.jobs__inner
+						h5.jobs__vacancy.h5 Marketing
+						.jobs__text 2 years experience
+						+i('arrow-next')
+						.jobs__preview
+							img.jobs__pic(src="img/jobs-pic-1.png" alt="")
+				a.jobs__item(href="#" data-aos="animation-scale-y")
+					.jobs__inner
+						h5.jobs__vacancy.h5 JS Developer
+							.jobs__counter 2
+						.jobs__text 2 years experience
+						+i('arrow-next')
+						.jobs__preview
+							img.jobs__pic(src="img/jobs-pic-1.png" alt="")
+		.line(data-aos="animation-line" data-aos-offset="0")
+			svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+				path(fill="none" stroke="#9A97ED" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+	
+	+about
+				
+
+
+
+
+
+
+
+
+
+
+

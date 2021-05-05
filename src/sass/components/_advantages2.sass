@@ -1,0 +1,208 @@
+.advantages2
+	+w
+		padding-bottom: 30px
+	+d
+		padding: 90px 0 
+	+m
+		padding: 75px 0 
+	&__row
+		position: relative
+		display: flex
+		align-items: center
+		min-height: 1060px
+		padding: 100px 0 
+		+w
+			min-height: 950px
+		+d
+			min-height: auto
+			padding: 0
+		+t
+			display: block
+		&:nth-child(2)
+			min-height: 1106px
+			+w
+				min-height: 950px
+			+d
+				min-height: auto
+		+nl
+			+d
+				margin-bottom: 140px
+			+t
+				margin-bottom: 90px
+	&__wrap
+		position: relative
+		z-index: 3
+	&__row:first-child &__wrap
+		max-width: 528px
+		margin-left: auto
+		+x
+			max-width: 520px
+		+d
+			max-width: 360px
+		+t
+			max-width: 100% 
+	&__row:first-child &__bg
+		top: 50%
+		left: calc(50% - 697px)
+		transform: translateY(-45%)
+		+x
+			left: calc(50% - 680px)
+		+d
+			left: calc(50% - 470px)
+		+t
+			top: auto
+			left: auto
+			transform: translateY(0)
+			margin: 0 auto
+		+a
+			margin: 0 -43px 
+	&__row:nth-child(2) &__wrap
+		max-width: 528px
+		+d
+			max-width: 360px
+		+t
+			max-width: 100% 
+	&__row:nth-child(2) &__bg
+		top: 50%
+		right: calc(50% - 668px) 
+		transform: translateY(-48%)
+		+w
+			right: calc(50% - 660px)
+		+d
+			right: calc(50% - 500px)
+		+t
+			top: auto
+			right: auto
+			transform: translateY(0)
+			margin: 0 auto 40px 
+		+a
+			margin: 0 -30px 40px 
+		img
+			width: 100% 
+	&__row:nth-child(2) &__preview:nth-child(2)
+		position: absolute
+		left: 18%
+		bottom: -1%
+		width: 65%
+		+shadow4
+		+d
+			bottom: 4%
+		+m
+			left: 13%
+			width: 74%
+	&__row:nth-child(3) &__wrap
+		max-width: 545px
+		margin-left: auto
+		+d
+			max-width: 360px
+		+t
+			max-width: 100% 
+	&__row:nth-child(3) &__bg
+		top: 50%
+		left: calc(50% - 670px)
+		transform: translateY(-44%)
+		+x
+			left: calc(50% - 660px)
+			width: 600px 
+		+d
+			left: calc(50% - 470px)
+			width: 450px
+		+t
+			top: auto
+			left: auto
+			transform: translateY(0)
+			margin: 0 auto
+		+a
+			width: auto
+			margin: 0 -29px   
+	&__title
+		margin-bottom: 33px
+		+d
+			margin-bottom: 24px
+	&__info
+		margin-bottom: 36px
+	&__item
+		display: flex
+		+nl
+			margin-bottom: 54px
+			+d
+				margin-bottom: 40px
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0 
+		width: 74px
+		height: 74px
+		margin-right: 32px
+		border-radius: 50%
+		+d
+			width: 70px
+			height: 70px
+			margin-right: 20px
+	&__category
+		margin-bottom: 23px
+		+h8
+		font-weight: 600 
+		+d
+			margin-bottom: 12px
+			font-size: 20px
+			line-height: 1.6
+	&__text
+		color: $text3
+		+d
+			font-size: 16px
+	&__clients
+		display: flex
+		flex-wrap: wrap
+		margin: -32px -21px 51px
+		+d
+			margin: -20px -9px 41px
+	&__logo
+		display: flex
+		justify-content: center
+		align-items: center
+		flex: 0 0 calc(50% - 42px)
+		width: calc(50% - 42px)
+		height: 104px
+		margin: 32px 21px 0
+		padding: 20px 
+		border-radius: 15px
+		background: $bg3  
+		+d
+			flex: 0 0 calc(50% - 18px)
+			width: calc(50% - 18px)
+			height: 70px
+			margin: 20px 9px 0
+		+t
+			height: 90px
+		+m
+			height: 70px
+		img
+			max-width: 144px
+			max-height: 42px
+			+d
+				max-width: 100% 
+			+m
+				max-height: 28px 
+	&__bg
+		position: absolute
+		z-index: -1
+		+w
+			width: 670px
+		+d
+			width: 460px
+		+t
+			position: relative
+		+a
+			width: auto
+		img
+			+w
+				width: 100%
+
++dark
+	.advantages2
+		&__row:nth-child(2) .advantages2__preview:nth-child(2)
+			+shadow4-dark 
+		&__logo
+			background: $dark3 

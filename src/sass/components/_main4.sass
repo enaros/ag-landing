@@ -1,0 +1,69 @@
+.main4
+	position: relative
+	overflow: hidden
+	+m
+		padding-top: 60px 
+	&__center
+		display: flex
+		align-items: center
+		min-height: 909px
+		padding-top: 100px
+		padding-bottom: 100px
+		+d
+			min-height: 783px
+			padding-bottom: 50px
+		+t
+			min-height: 700px
+		+m
+			display: block
+			min-height: auto
+			padding: 0 20px
+	&__wrap
+		position: relative
+		z-index: 3
+		max-width: 570px
+		+x
+			max-width: 530px
+		+d
+			max-width: 350px
+	&__title
+		margin-bottom: 31px
+		+m
+			margin-bottom: 25px
+	&__info
+		margin-bottom: 42px
+	&__btns
+		display: flex
+		+d
+			display: block 
+	&__btn
+		+m
+			min-width: 100% 
+		+nl
+			margin-right: 32px
+			+d
+				margin: 0 0 25px 
+	&__preview
+		position: absolute
+		right: 0
+		bottom: 0
+		pointer-events: none
+		+shadow4
+		+rmin(1580)
+			right: calc(50% - 700px) 
+		+d
+			width: 502px
+		+t
+			right: -80px
+			width: 450px
+		+m
+			position: static
+			width: auto
+			margin: 66px -20px 0 0
+		img
+			width: 100%
+
++dark
+	.main4
+		&__preview
+			+shadow4-dark

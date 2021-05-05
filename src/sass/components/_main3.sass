@@ -1,0 +1,66 @@
+.main3
+	position: relative
+	padding-top: 106px
+	+t
+		padding-top: 90px
+	+m
+		padding: 62px 0 57px 
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: 408px
+		z-index: -1
+		background: $bg3 
+		+d
+			height: 274px 
+		+m
+			height: 144px
+	&__title
+		max-width: 790px
+		margin: 0 auto 32px
+		text-align: center
+		+m
+			margin-bottom: 24px
+			text-align: left
+			line-height: 1.1
+	&__info
+		max-width: 860px
+		margin: 0 auto 42px
+		text-align: center
+		+m
+			margin-bottom: 25px
+			text-align: left
+	&__btns
+		display: flex
+		justify-content: center
+		+m
+			display: block
+			margin-bottom: 60px
+	&__btn
+		+m
+			min-width: 100% 
+		+nl
+			margin-right: 32px
+			+m
+				margin: 0 0 25px 
+	&__preview
+		position: relative
+		left: 50%
+		width: 1440px
+		transform: translateX(-50%) 
+		+d
+			width: 1192px
+		+t
+			width: 900px
+		+m
+			width: 461px
+		img
+			width: 100% 
+
++dark
+	.main3
+		&:before
+			background: $dark3

@@ -1,0 +1,90 @@
+.companies1
+	padding: 78px 0 85px
+	overflow: hidden
+	+d
+		padding: 64px 0
+	+m
+		padding: 40px 0 45px 
+	&__info
+		display: inline-block
+		position: relative
+		margin-bottom: 31px
+		color: $text3
+		+t
+			display: block
+			text-align: center
+		&:before
+			content: ""
+			position: absolute
+			top: 15px
+			left: calc(100% + 44px) 
+			width: 5000px
+			height: 2px
+			background: $bg2 
+			+t
+				display: none
+	&__head
+		position: relative
+		margin-bottom: 35px
+		text-align: center
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 5000px
+			height: 2px
+			background: $bg2 
+			+m
+				display: none
+	&__head &__title
+		position: relative
+		z-index: 2
+		display: inline-block
+		padding: 0 80px
+		background: $white
+		+x
+			padding: 0 60px
+		+m
+			display: block
+			padding: 0 
+	&__title
+		text-align: center
+		color: $text3
+	&__center > &__title
+		margin-bottom: 32px  
+	&__list
+		display: flex
+		justify-content: space-between
+		margin: -40px -32px 0 
+		+t
+			flex-wrap: wrap
+			justify-content: center
+			margin: -24px -20px 0 
+		+m
+			margin: -24px -10px 0
+	&__preview
+		margin: 40px 32px 0
+		+t
+			margin: 24px 20px 0 
+		+m
+			flex: 0 0 calc(50% - 20px)
+			width: calc(50% - 20px)
+			margin: 24px 10px 0
+			padding: 0 15px 
+			text-align: center
+		img
+			max-width: 100% 
+			max-height: 48px
+
++dark
+	.companies1
+		&__info
+			&:before
+				background: $dark3 
+		&__head
+			&:before
+				background: $dark3 
+		&__head .companies1__title
+			background: $dark4

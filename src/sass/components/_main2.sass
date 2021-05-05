@@ -1,0 +1,129 @@
+.main2
+	position: relative
+	+t
+		padding: 70px 0 80px
+	+m
+		padding: 50px 0 65px  
+	&__center
+		display: flex
+		align-items: center
+		min-height: 1113px
+		padding-top: 53px
+		padding-bottom: 105px
+		+w
+			min-height: 1000px
+		+d
+			min-height: 700px
+		+t
+			display: block
+			min-height: auto 
+			padding-top: 0
+			padding-bottom: 0
+	&__wrap
+		position: relative
+		z-index: 3
+		max-width: 495px
+		+x
+			max-width: 450px
+		+d
+			max-width: 420px
+		+t
+			max-width: 100% 
+	&__title
+		margin-bottom: 35px
+		+m
+			margin-bottom: 25px
+	&__info
+		margin-bottom: 36px
+	&__btns
+		display: flex
+		margin-bottom: 63px
+		+d
+			margin-bottom: 50px 
+		+m
+			display: block
+			margin-bottom: 40px
+	&__line
+		display: flex
+		align-items: center
+	&__social
+		display: flex
+		align-items: center
+		+nl
+			margin-right: 32px
+			+m
+				margin-right: 20px
+	&__link
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0 
+		width: 72px
+		height: 72px
+		border-radius: 50%
+		background: #F5F6FA
+		transition: background .2s
+		+m
+			width: 60px
+			height: 60px
+		&:hover
+			background: $bg2 
+		img
+			max-width: 35px
+			max-height: 35px
+			+m
+				max-width: 28px
+				max-height: 28px
+		+nl
+			margin-right: 32px
+			+m
+				margin-right: 10px
+	&__note
+		color: $text3 
+	&__bg
+		position: absolute
+		top: 50%
+		right: calc(50% - 667px)
+		width: 718px 
+		z-index: -1
+		transform: translateY(-52.5%)
+		+x
+			right: calc(50% - 650px)
+			width: 670px
+		+d
+			right: calc(50% - 520px)
+			width: 470px
+		+t
+			position: relative
+			top: auto
+			right: auto
+			transform: translateY(0)
+			margin: 0 auto 50px 
+		+a
+			width: auto 
+			margin: 0 -9px 60px -18px
+	&__preview
+		&:nth-child(2)
+			left: 20%
+			bottom: 4%
+			width: 63%
+			+shadow4
+			+m
+				left: 13.7%
+				bottom: -4%
+				width: 75%
+		img
+			width: 100% 
+		+nf
+			position: absolute
+			+shadow4
+
++dark
+	.main2
+		&__preview
+			+nf
+				+shadow4-dark
+		&__link
+			background: $dark3
+			&:hover
+				background: $dark2 

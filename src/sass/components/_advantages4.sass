@@ -1,0 +1,149 @@
+.advantages4
+	+t
+		padding: 90px 0 
+	&__row
+		position: relative
+		display: flex
+		align-items: center
+		min-height: 1041px
+		padding: 100px 0 
+		+x
+			min-height: 950px
+		+d
+			min-height: 840px
+		+t
+			display: block
+			min-height: auto 
+			padding: 0
+		&:first-child
+			min-height: 1061px
+			+x
+				min-height: 950px
+			+d
+				min-height: 790px
+			+t
+				min-height: auto 
+		+nl
+			+t
+				margin-bottom: 90px
+	&__wrap
+		position: relative
+		z-index: 3
+	&__row:first-child &__wrap
+		max-width: 510px
+		+d
+			max-width: 370px
+		+t
+			max-width: 100% 
+	&__row:first-child &__preview
+		right: calc(50% - 620px)
+		+d
+			right: calc(50% - 490px)
+			width: 470px
+		+m
+			width: 100% 
+	&__row:nth-child(2) &__wrap
+		max-width: 500px
+		margin-left: auto
+		+d
+			max-width: 360px
+		+t
+			max-width: 100% 
+	&__row:nth-child(2) &__preview
+		left: calc(50% - 620px)
+		+d
+			left: calc(50% - 500px)
+			width: 500px
+		+m
+			width: 100% 
+	&__title
+		margin-bottom: 32px
+		+d
+			margin-bottom: 25px
+	&__info
+		margin-bottom: 39px
+	&__item
+		display: flex
+		+nl
+			margin-bottom: 39px
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0 
+		width: 74px
+		height: 74px
+		margin-right: 32px
+		border-radius: 50%
+		+d
+			margin-right: 20px
+	&__category
+		margin-bottom: 23px
+		+h8
+		font-weight: 600
+		+d
+			margin-bottom: 14px
+			font-size: 20px
+			line-height: 1.6 
+		+m
+			margin-bottom: 10px
+	&__text
+		line-height: 2
+		color: $text3
+		+d
+			font-size: 16px
+	&__list
+		column-count: 2
+		column-gap: 30px
+		margin-right: -20px
+		margin-bottom: 9px
+		+m
+			column-count: 1
+			column-gap: 0
+			margin: 0 0 40px
+		li
+			position: relative
+			display: flex
+			align-items: center
+			min-height: 36px
+			margin-bottom: 37px
+			padding-left: 54px
+			line-height: 1.2
+			color: $text3 
+			+d
+				font-size: 16px
+			+m
+				margin: 0
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 0
+				width: 36px
+				height: 36px
+				transform: translateY(-50%)
+				background: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='18' cy='18' r='18' fill='%23EAFAF3'/%3E%3Cpath d='M27 12.5L14.625 24.5L9 19.045' stroke='%232DCA8C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / 100% auto
+			+nl
+				+m
+					margin-bottom: 30px
+	&__preview
+		position: absolute
+		top: 50%
+		z-index: -1
+		transform: translateY(-50%)
+		+t
+			position: static
+			transform: translateY(0)
+			margin: 0 auto 50px
+		img
+			width: 100% 
+
++dark
+	.advantages4
+		&__preview
+			+shadow4-dark
+		&__list
+			li
+				&:before
+					background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='18' cy='18' r='18' fill='%232DCA8C'/%3E%3Cpath d='M27 12.5L14.625 24.5L9 19.045' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+	

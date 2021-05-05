@@ -1,0 +1,241 @@
+---
+title: Case study
+---
+extends layouts/_layout
+block content
+	.case
+		+header('', 'active')
+		.case__center.center
+			.case__wrap
+				.case__arrows.arrows(data-aos="animation-scale-y")
+					a.arrows__prev(href="#")
+						+i('arrow-prev')
+					a.arrows__next(href="#")
+						+i('arrow-next')
+				.case__category.category(data-aos="animation-scale-y" data-aos-delay="200") Featured Product
+				h1.case__title.title.title_big(data-aos="animation-scale-y" data-aos-delay="400") Bento<span class="title__color">.</span>
+				.case__info.h6(data-aos="animation-scale-y" data-aos-delay="600") Drag & Drop 3D Visual Design System.
+				.case__list
+					.case__item(data-aos="animation-scale-y")
+						.case__icon
+							img.case__pic(src="img/pacman.svg" alt="")
+						.case__text Global Digital <br>Agency of Record
+					.case__item(data-aos="animation-scale-y" data-aos-delay="200")
+						.case__icon
+							img.case__pic(src="img/incognito.svg" alt="")
+						.case__text 5 Years of Digital <br>Marketing Excellence
+			.case__bg(data-aos="animation-translate-up")
+				.case__preview
+					img.case__pic.js-parallax(data-scale="1.25" data-orientation="right" src="img/case-pic.png" alt="")
+				.case__figure
+					img.case__pic.js-parallax(data-scale="1.5" data-orientation="right" src="img/case-figure.svg" alt="")
+		.line
+			svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="642" height="820")
+				path.path(fill="none" stroke="#FFC7DF" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+	.overview
+		.overview__center.center
+			.overview__container(data-aos="animation-scale-y")
+				.overview__slider.js-overview-slider
+					.overview__preview
+						img.overview__pic(src="img/overview-pic-1.png" alt="")
+					.overview__preview
+						img.overview__pic(src="img/overview-pic-1.png" alt="")
+					.overview__preview
+						img.overview__pic(src="img/overview-pic-1.png" alt="")
+			.overview__wrap
+				.overview__stage.stage(data-aos="animation-translate-right") <span class="stage__number">01.</span> Overview
+				h2.overview__title.h2(data-aos="animation-scale-y" data-aos-delay="200") The First Fully Editable, 3D Visual Design System.
+				.overview__text(data-aos="animation-scale-y" data-aos-delay="400") Effortlessly combine different elements to create compelling compositions that will surely help you tell a better story for your landing pages, websites, portfolios, presentations, and more in just a matter of minutes.
+				h6.overview__info.h6(data-aos="animation-scale-y" data-aos-delay="600") 🔥 The number of applications and use cases is nearly endless.
+				.overview__list
+					.overview__item(data-aos="animation-translate-up")
+						.overview__inner
+							.overview__icon
+								img.overview__pic(src="img/work-pic-3.png" alt="")
+							.overview__category.h6 Fully Editable
+					.overview__item(data-aos="animation-translate-up" data-aos-delay="200")
+						.overview__inner
+							.overview__icon
+								img.overview__pic(src="img/work-pic-4.png" alt="")
+							.overview__category.h6 High Resolution
+	.quality
+		.bg
+			.bg__preview
+				img.bg__pic.js-parallax(data-scale="1.3" data-orientation="left" src="img/bg.svg" alt="")
+		.quality__center.center
+			.quality__head.head
+				.head__box
+					.head__stage.stage <span class="stage__line" data-aos="animation-translate-right"><span class="stage__number">02.</span> Folio Agency</span>
+						.stage__logo
+							img.stage__pic(src="img/logo-sm.png" alt="")
+					h2.head__title.h2(data-aos="animation-scale-y" data-aos-delay="200") By the Numbers.
+			.quality__list
+				.quality__item
+					.quality__number.number(data-aos) <span>2</span><span>0</span>
+					.quality__category.h6(data-aos="animation-scale-y" data-aos-delay="200") Pre-build Scenes 🔥
+					.quality__info(data-aos="animation-scale-y" data-aos-delay="400") Bento is the first fully editable, 3D visual design system with global auto-updatable style guides built right in Figma.
+					a.quality__download(href="#" data-aos="animation-scale-y" data-aos-delay="600")
+						.quality__icon
+							.quality__arrows
+								img.quality__pic(src="img/arrow-down.svg" alt="")
+								img.quality__pic(src="img/arrow-down.svg" alt="")
+						.quality__text Download 
+				.quality__item
+					.quality__number.number(data-aos) <span>4</span><span>0 <span class="number__plus">+<span></span>
+					.quality__category.h6(data-aos="animation-scale-y" data-aos-delay="200") Scene Objects 🤩
+					.quality__info(data-aos="animation-scale-y" data-aos-delay="400") Bento is the first fully editable, 3D visual design system with global auto-updatable style guides built right in Figma.
+					a.quality__download(href="#" data-aos="animation-scale-y" data-aos-delay="200")
+						.quality__icon
+							.quality__arrows
+								img.quality__pic(src="img/arrow-down.svg" alt="")
+								img.quality__pic(src="img/arrow-down.svg" alt="")
+						.quality__text Download 
+			.quality__nav(data-aos="animation-translate-up")
+				a.quality__link(href="#") Overview
+				a.quality__link.active(href="#") Features
+				a.quality__link(href="#") Highlights
+				a.quality__link(href="#") Compatibility
+			.quality__container(data-aos="animation-translate-up")
+				select.quality__select.js-details-select
+					option Overview
+					option Features
+					option Highlights
+					option Compatibility
+				.quality__slider.js-quality-slider
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-1.png" alt="")
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-2.png" alt="")
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-3.png" alt="")
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-1.png" alt="")
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-2.png" alt="")
+					.quality__preview
+						img.quality__pic(src="img/quality-pic-3.png" alt="")
+		.line(data-aos="animation-line" data-aos-offset="0")
+			svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+				path(fill="none" stroke="#323259" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+	.advantages
+		.advantages__center.center
+			.advantages__wrap
+				.advantages__stage.stage <span class="stage__line" data-aos="animation-translate-right"><span class="stage__number">03.</span> Visual Identity</span>
+					.stage__logo
+						img.stage__pic(src="img/logo-sm-pink.png" alt="")
+				h2.advantages__title.h2(data-aos="animation-scale-y" data-aos-delay="200") Evolving the look & feel.
+				.advantages__info(data-aos="animation-scale-y" data-aos-delay="400") Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+				.advantages__number.number(data-aos) <span>8</span><span>0 <span class="number__plus">+<span></span>
+				.advantages__category.h6(data-aos="animation-scale-y" data-aos-delay="200") UI Elements
+			.advantages__box(data-aos="animation-translate-up")
+				.advantages__inner
+					.advantages__list
+						.advantages__item(data-aos="animation-scale-y")
+							.advantages__preview
+								img.advantages__pic(src="img/advantages-pic-1.png" alt="")
+							.advantages__text.h6 Auto-updatable Global Styleguide
+						.advantages__item(data-aos="animation-scale-y")
+							.advantages__preview
+								img.advantages__pic(src="img/advantages-pic-2.png" alt="")
+							.advantages__text.h6 The number of applications and use cases is nearly endless.
+						.advantages__item(data-aos="animation-scale-y")
+							.advantages__preview
+								img.advantages__pic(src="img/advantages-pic-3.png" alt="")
+							.advantages__text.h6 Auto-updatable Global Styleguide
+					.advantages__btn
+						button.btn.btn_primary(data-aos="animation-scale-y" data-aos-delay="200") Contact Us
+		.line(data-aos="animation-line" data-aos-offset="0")
+			svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+				path(fill="none" stroke="#9A97ED" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+	.talent.talent_case
+		.talent__center.center
+			.talent__container
+				.talent__bg(data-aos)
+					.talent__preview
+						img.talent__pic(src="img/talent-pic-1.png" alt="")
+					.talent__preview
+						img.talent__pic(src="img/talent-pic-2.png" alt="")
+					.talent__preview
+						img.talent__pic(src="img/talent-pic-3.png" alt="")
+					.talent__preview
+						img.talent__pic(src="img/talent-pic-4.png" alt="")
+					.talent__preview
+						img.talent__pic(src="img/logo-sm-white.png" alt="")
+				.talent__wrap
+					.talent__stage.stage(data-aos="animation-translate-right") <span class="stage__number">04.</span> Call to action
+					h2.talent__title.h2(data-aos="animation-scale-y" data-aos-offset="200") Auto-Updatable Global Styleguide
+					.talent__btn(data-aos="animation-scale-y" data-aos-offset="400")
+						button.btn.btn_white Download Now
+				.talent__figure
+					img.talent__pic.js-parallax(data-scale="1.3" data-orientation="right" src="img/talent-figure-pink.svg" alt="")
+	.cases.js-cases
+		.cases__center.center
+			.cases__head.head
+				.head__box
+					.head__stage.stage <span class="stage__line" data-aos="animation-translate-right"><span class="stage__number">04.</span> You may also like</span>
+						.stage__logo
+							img.stage__pic(src="img/logo-sm-pink.png" alt="")
+					h2.head__title.title(data-aos="animation-scale-y" data-aos-delay="200") Recent Works
+					.head__text(data-aos="animation-scale-y" data-aos-delay="400") Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+				.head__arrows.arrows(data-aos="animation-scale-y" data-aos-delay="300")
+					button.arrows__prev.js-prev
+						+i('arrow-prev')
+					button.arrows__next.js-next
+						+i('arrow-next')
+			.cases__container
+				.cases__inner
+					.cases__slider.js-cases-slider
+						.cases__item(data-aos="animation-translate-up")
+							.cases__preview
+								img.cases__pic(src="img/cases-pic-1.png" alt="")
+								a.cases__arrow.arrow(href="case.html")
+									.arrow__line
+										+i('arrow-next')
+										+i('arrow-next')
+								.cases__category.category Featured Product
+							h4.cases__title.h4 Bento 3D Illustration
+							.cases__text Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+						.cases__item(data-aos="animation-translate-up" data-aos-delay="250")
+							.cases__preview
+								img.cases__pic(src="img/cases-pic-2.png" alt="")
+								a.cases__arrow.arrow(href="case.html")
+									.arrow__line
+										+i('arrow-next')
+										+i('arrow-next')
+							h4.cases__title.h4 Bento Vol. 3
+							.cases__text Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+						.cases__item
+							.cases__preview
+								img.cases__pic(src="img/cases-pic-1.png" alt="")
+								a.cases__arrow.arrow(href="case.html")
+									.arrow__line
+										+i('arrow-next')
+										+i('arrow-next')
+								.cases__category.category Featured Product
+							h4.cases__title.h4 Bento 3D Illustration
+							.cases__text Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+						.cases__item
+							.cases__preview
+								img.cases__pic(src="img/cases-pic-2.png" alt="")
+								a.cases__arrow.arrow(href="case.html")
+									.arrow__line
+										+i('arrow-next')
+										+i('arrow-next')
+							h4.cases__title.h4 Bento Vol. 3
+							.cases__text Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+		.line(data-aos="animation-line" data-aos-offset="0")
+			svg.line__svg(xmlns="http://www.w3.org/2000/svg" width="542" height="820")
+				path(fill="none" stroke="#9A97ED" stroke-width="2" d="M67.002 1c-9.846 2.322-18.256 5.77-25.23 10.347C14.268 29.392 1 59 1 80.242c0 19.465 4.22 33.53 10.7 44.064 8.173 13.266 21.127 23.34 35.946 31.717S81 167.65 99.544 164.4s35.194-14.103 42.438-25.04c6.803-10.273 9.465-18.356 10.034-26.6.594-8.62.814-19.894-12.9-35.218-3.31-3.697-9.405-8.03-15.145-10.693-2.098-.973-14.094-6.014-27.454-5.476-11.45.46-24.028 5.89-30.787 11.675C50.498 86.087 44.87 111.313 47.656 129c2.55 16.172 13.563 35.116 33.645 48.24 11.517 7.526 26.962 13.923 42.67 16.554 15.095 2.53 36.494 6.735 53.47 12.248 16.285 5.29 28.394 11.897 31.848 13.942 6.62 3.92 11.166 8.683 13.38 10.648 4.286 3.803 19.582 21.91 25.16 36.19 9.54 24.417 8.908 49.09 8.256 54.772-1.8 15.703-7 27.963-12.697 37.603-9.28 15.704-21.97 24.68-33.526 28.574-10.768 3.63-20.613 2.77-24.24.96-5.258-2.624-13.262-6.02-18.323-15.728-.928-1.78-2.566-4.622-3.738-9.447-.664-2.732-1.82-19.51 3.738-34.634 2.365-6.435 7.644-21.235 18.323-34.158 14.42-17.453 35.752-33.512 45.406-39.992 16.803-11.278 32.187-19.34 48.6-22.522 3.183-.617 17.907-2.69 31.893-.54 13.195 2.03 25.598 8.157 31.39 11.784 12.017 7.524 21.507 18.63 28.876 37.773 1.484 3.855 2.396 10.446 2.868 15.367.5 5.11.503 8.59 0 14.718-1.117 13.603-4.78 29.58-14.285 47.846-3.29 6.323-8.076 14.9-16.05 25.698-4.696 6.36-13.85 17.642-27.464 33.846l-42.38 50.89c-16.087 20.25-28.28 36.992-36.11 52.17-5.392 10.447-15.198 27.915-20.753 48.628-1.272 4.743-5.466 30.186-2.688 54.394 2.714 23.655 12.28 45.97 21.036 60.27 19.17 31.318 50.474 51.02 59.716 55.687 19.282 9.734 45.952 18.277 76.11 25.364C399.75 772.703 430.5 777.88 466 785.023l175.725 33.055")
+	+about
+				
+
+
+
+
+
+
+
+
+
+
+

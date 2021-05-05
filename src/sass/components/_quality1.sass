@@ -1,0 +1,56 @@
+.quality1
+	padding: 114px 0 113px
+	+d
+		padding: 90px 0 
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -16px
+		+t
+			display: block
+			margin: 0
+	&__item
+		flex: 0 0 calc(33.33% - 32px)
+		width: calc(33.33% - 32px)
+		margin: 0 16px
+		padding: 32px
+		border-radius: 15px
+		background: $white
+		transition: box-shadow .2s
+		+d
+			flex: 0 0 calc(50% - 32px)
+			width: calc(50% - 32px)
+		+t
+			width: 100%
+			margin: 0 
+		&:nth-child(n+3)
+			+d
+				display: none
+			+t
+				display: block
+		+nl
+			+t
+				margin-bottom: 25px
+		&:hover
+			+shadow4
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 80px
+		height: 80px
+		margin-bottom: 29px
+		border-radius: 50%
+	&__category
+		margin-bottom: 21px
+		+h6
+		font-weight: 700 
+	&__text
+		color: $text3
+
++dark
+	.quality1
+		&__item
+			background: $dark2
+			&:hover
+				+shadow4-dark

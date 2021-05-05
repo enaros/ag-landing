@@ -1,0 +1,168 @@
+.advantages3
+	+t
+		padding: 90px 0 
+	&__row
+		position: relative
+		display: flex
+		align-items: center
+		min-height: 962px
+		padding: 100px 0 
+		+d
+			min-height: 750px
+		+t
+			display: block
+			min-height: auto
+			padding: 0
+		&:first-child
+			min-height: 902px
+			+d
+				min-height: 717px
+			+t
+				min-height: auto
+		+nl
+			+t
+				margin-bottom: 100px
+	&__wrap
+		position: relative
+		z-index: 3
+	&__row:first-child &__wrap
+		max-width: 525px
+		+d
+			max-width: 415px
+		+t
+			max-width: 100% 
+	&__row:first-child &__preview
+		right: calc(50% - 720px)
+		+d
+			width: 512px
+		+d
+			right: calc(50% - 570px)
+		+t
+			right: auto
+		+m
+			width: auto 
+		+a
+			margin-right: -20px
+	&__row:nth-child(2) &__wrap
+		max-width: 530px
+		margin-left: auto
+		+d
+			max-width: 350px
+		+t
+			max-width: 100% 
+	&__row:nth-child(2) &__preview
+		left: calc(50% - 620px)
+		+x
+			left: calc(50% - 620px)
+			width: 560px
+		+d
+			left: calc(50% - 480px)
+			width: 500px
+		+t
+			left: auto
+		+a
+			width: 100% 
+	&__title
+		margin-bottom: 32px
+		+d
+			margin-bottom: 25px
+	&__info
+		margin-bottom: 39px
+	&__list
+		column-count: 2
+		column-gap: 30px
+		margin-bottom: 9px
+		+d
+			margin-right: -50px
+			column-gap: 10px
+		+m
+			margin: 0 0 40px 
+			column-count: 1
+			column-gap: 0
+		li
+			position: relative
+			display: flex
+			align-items: center
+			min-height: 36px
+			margin-bottom: 37px
+			padding-left: 54px
+			line-height: 1.2
+			color: $text3 
+			+d
+				font-size: 16px
+			+m
+				margin: 0
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 0
+				width: 36px
+				height: 36px
+				transform: translateY(-50%)
+				background: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='18' cy='18' r='18' fill='%23EAFAF3'/%3E%3Cpath d='M27 12.5L14.625 24.5L9 19.045' stroke='%232DCA8C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / 100% auto
+			+nl
+				+m
+					margin-bottom: 30px
+	&__group
+		display: flex
+		margin-bottom: 45px
+		+d
+			flex-wrap: wrap
+			margin: -30px -10px 35px 
+		+t
+			margin: 0 0 35px 
+		+m
+			margin: -30px -10px 35px 
+	&__box
+		+d
+			flex: 0 0 calc(50% - 20px)
+			width: calc(50% - 20px)
+			margin: 30px 10px 0 
+		+t
+			flex: 0 0 auto
+			width: auto
+			margin: 0 
+		+m
+			flex: 0 0 calc(50% - 20px)
+			width: calc(50% - 20px)
+			margin: 30px 10px 0 
+		+nl
+			margin-right: auto
+			+d
+				margin-right: 10px
+			+t
+				margin-right: auto
+			+m
+				margin-right: 10px
+	&__category
+		margin-bottom: 7px
+		+h5
+		font-weight: 600 
+	&__text
+		font-size: 20px
+		line-height: 1.2
+		color: $text3 
+	&__preview
+		position: absolute
+		top: 50%
+		z-index: -1
+		transform: translateY(-50%)
+		+shadow4
+		+t
+			position: static
+			top: auto
+			transform: translateY(0)
+			margin: 0 auto 65px 
+		img
+			width: 100% 
+
++dark
+	.advantages3
+		&__preview
+			+shadow4-dark
+		&__list
+			li
+				&:before
+					background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='18' cy='18' r='18' fill='%232DCA8C'/%3E%3Cpath d='M27 12.5L14.625 24.5L9 19.045' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+	

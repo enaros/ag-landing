@@ -1,0 +1,46 @@
+.video
+	position: relative
+	width: 100%
+	height: 0 
+	padding-bottom: 56.25%
+	background: #000 
+	overflow: hidden
+	&__link,  
+	&__media
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+	&__media
+		border: none  
+	&__button
+		display: none
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 1
+		transform: translate(-50%,-50%)
+		width: 68px
+		height: 48px
+		background: none 
+	&__button:focus &__button-shape
+		fill: #ff0000
+		fill-opacity: 1
+	&__button-shape
+		fill: #212121
+		fill-opacity: .8
+		transition: all .3s 
+	&__button-icon
+		fill: #ffffff
+	&__button:focus
+		outline: none
+	&:hover &__button-shape
+		fill: #ff0000
+		fill-opacity: 1
+
+.video--enabled
+	cursor: pointer
+
+.video--enabled .video__button
+	display: block

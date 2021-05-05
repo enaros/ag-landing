@@ -1,0 +1,4025 @@
+body
+	min-width: 375px
+	+font-family
+	font-size: 18px
+	line-height: 1.35 
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	color: $dark
+	+d
+		font-size: 20px
+		line-height: 1.25 
+	&.no-scroll
+		overflow: hidden
+		
+button,
+input,
+textarea,
+select
+	+font-family
+
+.page
+	overflow: hidden
+
+.center
+	max-width: 1384px
+	margin: 0 auto
+	padding: 0 107px
+	+d
+		padding: 0 100px 
+	+t
+		padding: 0 50px 
+	+m
+		padding: 0 32px 
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6
+	font-weight: 700 
+
+.h1,
+.h2,
+.h3
+	letter-spacing: -.5px 
+
+.h1
+	font-size: 76px
+	line-height: (92/76) 
+
+.h2
+	font-size: 64px
+	line-height: (72/64) 
+	+d
+		font-size: 48px
+		line-height: (56/48) 
+	+m
+		font-size: 40px
+		line-height: (48/40)
+
+.h3
+	font-size: 48px
+	line-height: (56/48) 
+
+.h4
+	font-size: 40px
+	line-height: (48/40)
+	letter-spacing: -.4px
+	+d
+		font-size: 32px
+		line-height: (40/32)
+		letter-spacing: -.5px 
+	+m
+		font-size: 24px
+		line-height: (32/24)
+		letter-spacing: -.2px  
+
+.h5
+	font-size: 32px
+	line-height: (40/32)
+	letter-spacing: -.5px 
+	+d
+		font-size: 24px
+		line-height: (32/24)
+		letter-spacing: -.2px  
+
+.h6
+	font-size: 24px
+	line-height: (32/24)
+	letter-spacing: -.2px  
+	+d
+		font-size: 18px
+		line-height: (24/18) 
+
+.btn
+	position: relative
+	min-width: 180px
+	height: 64px
+	border-radius: 8px 
+	+font-family
+	border-width: 2px
+	border-style: solid 
+	overflow: hidden
+	font-size: 18px
+	font-weight: 700 
+	transition: all .35s
+	+d
+		height: 56px
+		font-size: 16px
+	+m
+		min-width: 160px
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		height: 300%
+		border-radius: 50% 50% 0 0/75% 75% 0 0 
+		transition: height .35s
+	&:hover:before
+		height: 0  
+	&:hover
+		transform: translateY(-2px)
+	&:active
+		transform: translateY(2px)
+	&_secondary
+		border-color: $secondary
+		color: $wh
+		&:before 
+			background: $secondary
+		&:hover
+			color: $secondary 
+	&_outline
+		border-color: $dark
+		color: $dark
+		&:before 
+			background: $wh
+		&:hover
+			color: $dark 
+	&_dark
+		border-color: $dark
+		color: $wh
+		&:before 
+			background: $dark
+		&:hover
+			color: $dark 
+	&_primary
+		border-color: $primary 
+		color: $wh
+		&:before 
+			background: $primary
+		&:hover
+			color: $primary
+	&_white
+		border-color: $wh 
+		color: $primary
+		&:before 
+			background: $wh
+		&:hover
+			color: $wh 
+	[href]
+		display: inline-flex
+		justify-content: center
+		align-items: center
+	
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: 10px
+	padding: 64px 0
+	+d
+		padding: 40px 0 
+	&__center
+		display: flex
+		align-items: center
+		width: 100% 
+		max-width: 100% 
+		padding: 0 72px
+		+d
+			padding: 0 50px  
+		+t
+			padding: 0 30px 
+	&__logo
+		font-size: 0
+		+m
+			position: relative
+			z-index: 15
+			margin-right: auto
+			&.toggle
+				.header__pic_black
+					display: none
+				.header__pic_white
+					display: inline-block
+	&__pic
+		width: 214px
+		+d
+			width: 161px
+		&_white
+			display: none
+	&__wrap
+		display: flex
+		flex-grow: 1
+		padding-left: 20px
+		+t
+			padding: 0
+		+m
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			z-index: 10
+			flex-direction: column
+			align-items: flex-start
+			min-height: 100vh 
+			padding: 150px 32px 40px 
+			background: $dark 
+			transform: translateX(-100%)
+			transition: transform .25s
+			&.visible
+				transform: translateX(0)
+				.line
+					path
+						animation: dash 1.5s linear forwards
+	&__nav
+		display: flex
+		margin: 0 auto 
+		+m
+			flex-direction: column
+			align-items: flex-start
+			margin: 0 0 auto 
+	&__item
+		position: relative
+		font-weight: 600 
+		color: $text-dark 
+		transition: color .25s
+		+m
+			font-size: 32px
+			color: #595976 
+		&:hover
+			color: $text-light
+			+m
+				color: #595976  
+		&.active
+			color: $primary 
+			+m
+				color: $wh 
+		+nl
+			margin-right: 68px
+			+d
+				margin-right: 54px
+			+t
+				margin-right: 40px
+			+m
+				margin: 0 0 32px 
+			+a
+				margin-bottom: 40px
+	&__counter
+		position: absolute
+		left: calc(100% + 7px)
+		bottom: calc(100% - 11px)
+		min-width: 24px
+		padding: 0 5px 
+		border-radius: 50%
+		// background: linear-gradient(180deg, #3A8FFF 0%, #0837AE 100%) 
+		background-color: $pink;
+		text-align: center
+		font-size: 14px
+		line-height: 24px
+		font-weight: 600
+		color: $wh  
+		+m
+			bottom: calc(100% - 17px)
+	&__btn
+		// +w
+		//   font-size: 18px
+		//   height: 56px
+		+t
+			min-width: 130px
+			height: 46px
+		+m
+			display: none
+	&__burger
+		position: relative
+		z-index: 15
+		display: none
+		width: 32px
+		height: 32px
+		text-align: center
+		transition: background .3s
+		-webkit-tap-highlight-color: rgba(0,0,0,0)
+		+m
+			display: inline-block
+		&:before,
+		&:after
+			content: ''
+			display: block
+			width: 32px
+			height: 2px
+			background: $dark
+			transition: transform .3s, width .3s, background .3s
+		&:before
+			margin-bottom: 8px
+		&.active
+			&:before,
+			&:after
+				background: $wh 
+			&:before
+				transform: translateY(5px) rotate(45deg)
+			&:after
+				transform: translateY(-5px) rotate(-45deg)
+	&__social
+		display: none
+		+m
+			display: flex
+			margin-top: 60px
+	&__link
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		border: 1px solid rgba(#D8D8D8, .2)
+		font-size: 0
+		.icon
+			font-size: 12px
+			&-youtube
+				font-size: 10px
+				fill: #ADADAD
+		+nl
+			margin-right: 32px
+	&__bg
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 5
+		background: rgba(#000, .7) 
+		visibility: hidden
+		opacity: 0
+		transition: all .25s 
+		&.show
+			+m
+				visibility: visible
+				opacity: 1
+	.line
+		display: none
+		+m
+			display: block
+			top: -152px
+			left: 0
+
+.title
+	font-size: 80px
+	font-weight: 700 
+	line-height: (100/79)
+	letter-spacing: -1px 
+	+d
+		font-size: 60px
+		line-height: (72/60) 
+		letter-spacing: -.5px 
+	+m
+		font-size: 44px
+		line-height: (56/44) 
+	&__color
+		color: $primary 
+	&_big
+		font-size: 110px
+		line-height: (131/110)
+		letter-spacing: -1.2px 
+		+d
+			font-size: 76px
+			line-height: (92/76)
+			letter-spacing: -.5px 
+		
+.main
+	position: relative
+	padding: 238px 0 120px
+	+d
+		padding: 169px 0 115px 
+	+m
+		padding: 118px 0 330px 
+	&__wrap
+		max-width: 470px
+		+m
+			max-width: 100% 
+	&__title
+		margin-bottom: 40px
+		+d
+			margin-bottom: 24px
+		p
+			display: inline-flex
+			overflow: hidden
+			span
+				display: block
+				+nl
+					margin-right: 18px
+		&[data-aos]
+			p
+				span
+					transform: translateY(105%)
+					transition: transform .8s 
+			&.aos-animate
+				p
+					span
+						transform: translateY(0)
+				p:first-child
+					span
+						&:first-child
+							transition-delay: .2s
+						&:nth-child(2)
+							transition-delay: .4s
+				p:nth-child(2)
+					span
+						&:first-child
+							transition-delay: .6s
+						&:nth-child(2)
+							transition-delay: .8s 
+				p:nth-child(3)
+					span
+						&:first-child
+							transition-delay: .8s
+	&__info
+		max-width: 370px
+		margin-bottom: 48px
+		line-height: (32/18)
+		color: $text-light
+		+d
+			max-width: 265px
+			margin-bottom: 32px
+		+m
+			max-width: 100%
+			margin-bottom: 24px 
+	&__btn
+		margin-bottom: 56px
+		+d
+			margin-bottom: 56px
+		+t
+			margin-bottom: 32px
+	&__scroll
+		display: inline-flex
+		align-items: center
+		font-weight: 600 
+		color: $text-dark 
+		+m
+			display: none
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 48px
+		height: 48px
+		margin-right: 16px
+		border-radius: 50% 
+		background: $secondary  
+		overflow: hidden
+		font-size: 0
+		+d
+			width: 40px
+			height: 40px
+	&__arrows
+		display: flex
+		flex-direction: column
+		transform: translateY(-43px)
+		transition: transform .35s 
+	&__arrows &__pic
+		+nl
+			margin-bottom: 64px
+	&__scroll:hover &__arrows
+		animation: arrowsDown .5s forwards
+	&__bg
+		position: absolute
+		top: 283px
+		right: calc(50% - 691px) 
+		z-index: -1
+		width: 928px
+		font-size: 0
+		+d
+			top: 210px
+			right: calc(50% - 453px) 
+			width: 700px
+		+t
+			top: 230px
+			width: 600px
+		+m
+			top: auto
+			right: calc(50% - 203px) 
+			bottom: 56px
+			width: 400px
+		&[data-aos]
+			.main__preview
+				opacity: 0
+				transition: all .6s  
+				&:nth-child(1)
+					transform: translateY(60px)
+				&:nth-child(2)
+					transform: translateX(80px)
+					transition-delay: .2s 
+				&:nth-child(3)
+					transform: translateX(40px)
+					transition-delay: .4s 
+				&:nth-child(4)
+					transform: translateY(60px)
+					transition-delay: .6s
+				&:nth-child(5)
+					transform: translateX(50px)
+					transition-delay: .8s
+				&:nth-child(6)
+					transform: translateX(50px) skewX(10deg)
+					transition-delay: 1s
+				&:nth-child(7)
+					transform: translateX(80px)
+					transition-delay: .6s 
+			&.aos-animate
+				.main__preview
+					opacity: 1
+					&:first-child
+						transform: translateY(-60px)
+						+d
+							transform: translateY(-40px)
+					&:nth-child(2)
+						transform: translateY(-40px) scaleY(1)  translateX(0)
+					&:nth-child(3)
+						transform: translateY(-40px)  translateX(0)
+					&:nth-child(4)
+						transform: translateY(0)
+					&:nth-child(5)
+						transform: translateX(0)
+					&:nth-child(6)
+						transform: translateX(0) skewX(0)
+					&:nth-child(7)
+						transform: translateY(-40px) scaleY(1)  translateX(0)
+	&__bg &__pic
+		width: 100% 
+	&__preview
+		&:first-child
+			position: relative
+			z-index: 3
+		&:nth-child(2)
+			top: 0
+			z-index: 4
+		&:nth-child(3)
+			top: 0
+			z-index: 5
+		&:nth-child(4)
+			top: 50.5%
+			left: 12.8%
+			z-index: 5
+			width: 40.7%
+		&:nth-child(5)
+			top: -9.4%
+			right: 5.8%
+			z-index: 1
+			width: 60.7%
+			+m
+				right: -2%
+		&:nth-child(6)
+			top: 5.5%
+			right: 12%
+			z-index: 2
+			width: 27.5%
+			+m
+				top: 10%
+				right: 8%
+		&:nth-child(7)
+			top: 0
+			z-index: 4
+		+nf
+			position: absolute
+	& > .line
+		top: 0
+		left: calc(50% - 395px)
+		+d
+			top: -110px
+			left: calc(50% - 365px)
+		+t
+			left: 100px
+		+m
+			top: -160px
+			left: 75px
+		path
+			animation: dash 2.5s .8s linear forwards
+
+.line
+	position: absolute
+	z-index: -5
+	pointer-events: none
+	font-size: 0
+	+d
+		transform: scale(.75)
+	+m
+		transform: scale(.63)
+	path
+		stroke-dasharray: 2173
+		stroke-dashoffset: 2173
+		+d
+			width: 456px
+
+[data-aos="animation-line"]
+	path
+		animation: none
+	&.aos-animate
+		path
+			animation: dash 3s linear forwards
+
+@keyframes dash
+	to 
+		stroke-dashoffset: 0
+
+@keyframes arrowsDown
+	100%
+		transform: translateY(43px)
+
+
+.bg1
+	background: $bg3 
+
+	
+.bg
+	+coverdiv
+	z-index: -5
+	background: $dark
+	&__preview
+		position: absolute
+		top: -40px
+		right: -100px
+		font-size: 0
+		+m
+			display: none
+	&__preview &__pic
+		+d
+			width: 570px
+		+t
+			width: 470px
+
+.stage
+	font-weight: 600 
+	color: $dark 
+	+m
+		font-size: 18px
+	&__line
+		display: inline-block
+	&__number
+		display: inline-block
+		width: 45px
+	&__logo
+		position: absolute
+		top: 0
+		left: 0
+		font-size: 0
+		+t
+			display: none
+	&__logo &__pic
+		width: 24px
+
+.number
+	position: relative
+	display: inline-block
+	font-size: 200px
+	font-weight: 600
+	line-height: 1.2
+	+d
+		font-size: 140px
+	+t
+		font-size: 110px
+	+m
+		font-size: 140px
+	&__plus
+		position: absolute
+		top: 25px
+		left: 100%
+		font-size: 64px
+		line-height: (72/64) 
+		+d
+			top: 17px
+			font-size: 46px
+	&[data-aos]
+		span
+			display: inline-block
+			opacity: 0
+			transition: all .7s 
+			&:first-child
+				transform: translateY(70px)
+			&:nth-child(2)
+				transform: translateY(-70px)
+		&.aos-animate
+			span
+				opacity: 1
+				transform: translateY(0)
+
+.arrows
+	display: flex
+	flex-shrink: 0 
+	&__prev,
+	&__next
+		width: 64px
+		height: 64px
+		flex-shrink: 0
+		border-radius: 50% 
+		font-size: 0
+		transition: all .25s
+		+d
+			width: 48px
+			height: 48px
+		.icon
+			font-size: 16px
+			fill: $dark
+			transition: fill .25s
+		&:hover
+			background: $primary
+			.icon
+				fill: $wh 
+		&[href]
+			display: flex
+			justify-content: center
+			align-items: center
+		+nl
+			margin-right: 16px
+	&_white &__prev,
+	&_white &__next
+		.icon
+			fill: $wh
+
+.head
+	position: relative
+	display: flex
+	padding-left: 200px
+	+d
+		padding-left: 140px
+	+t
+		padding: 0
+	+m
+		display: block 
+	&__box
+		flex-grow: 1
+	&__stage
+		margin-bottom: 24px
+	// &__title
+	//   +s
+	//     max-width: 240px
+	&__arrows
+		margin-left: 150px
+		padding-top: 48px
+		+d
+			margin-left: 95px
+		+m
+			margin: 0
+			padding-top: 32px
+	&__text
+		max-width: 467px
+		margin-top: 40px
+		line-height: (32/18)
+		color: $text-light
+		+d
+			max-width: 330px
+		+m
+			max-width: 100%
+			margin-top: 16px 
+	&__btns
+		margin-left: 100px
+		padding-top: 50px
+		flex-shrink: 0
+		+d
+			padding-top: 63px
+			margin-left: 70px
+		+m
+			display: none
+	&__btn
+		min-width: 166px
+		+d
+			min-width: 120px
+			height: 45px
+	&__select
+		display: none
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 144px
+		height: 48px
+		padding: 0 60px 0 24px 
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		border: none
+		border-radius: 0 
+		background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath fill-rule='evenodd' d='M.293.293a1 1 0 0 1 1.414 0L5 3.586 8.293.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z' fill='%23fff'/%3E%3C/svg%3E") no-repeat calc(100% - 18px) 50% / 10px 6px
+		+font-family
+		font-size: 14px
+		font-weight: 600 
+		color: $wh
+		&::-ms-expand
+			display: none
+		&:-moz-focusring
+			color: transparent
+			text-shadow: 0 0 0 #000 
+		+m
+			display: block
+
+.details
+	position: relative 
+	padding: 128px 0 129px 
+	color: $wh 
+	+t
+		padding: 100px 0 
+	+m
+		padding: 64px 0 
+	&__head
+		margin-bottom: 93px
+		+d
+			margin-bottom: 70px
+		+m
+			margin-bottom: 56px
+		.head__arrows
+			visibility: hidden
+			+m
+				display: none
+		h2 span
+				color: $green
+	.stage
+		color: $wh 
+	.stage__number
+		color: $text-dark 
+	&__body
+		display: flex
+		margin-bottom: 128px
+		+mac
+			align-items: center
+		+d
+			margin-bottom: 85px
+		+m
+			display: block
+			margin-bottom: 56px
+	&__years
+		position: relative
+		z-index: 2
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		flex-shrink: 0
+		width: 200px
+		padding-top: 35px
+		+d
+			width: 140px
+			padding: 0
+		+t
+			width: 80px
+		+m
+			display: none
+	&__year
+		position: relative
+		width: 45px
+		font-weight: 600
+		color: $text-dark
+		cursor: pointer
+		transition: color .25s 
+		+d
+			font-size: 14px 
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			right: calc(100% + 62px)
+			transform: translateY(-50%) 
+			width: 0
+			height: 4px
+			background: $wh
+			border-radius: 1px
+			transition: width .25s
+			pointer-events: none
+			+d
+				right: calc(100% + 45px)
+				height: 3px
+			+t
+				right: calc(100% + 15px)
+		&.active
+			color: $wh 
+			&:before
+				width: 24px 
+				+d
+					width: 17px
+		+nl
+			margin-bottom: 102px
+			+mac
+				margin-bottom: 80px
+			+d
+				margin-bottom: 65px
+			+t
+				margin-bottom: 50px
+	&__line
+		position: absolute
+		width: 0px
+		height: 1px
+		top: 50%
+		left: calc(100% + 23px) 
+		transform: translateY(-50%)
+		background: $wh 
+		opacity: 0
+		transition: all .25s 
+		pointer-events: none
+		+d
+			left: calc(100% + 5px)
+		&:before
+			content: "" 
+			position: absolute
+			top: -2px
+			left: -2px
+			width: 5px
+			height: 5px
+			border-radius: 50%
+			background: $wh
+	&__year.active &__line
+		width: 187px
+		opacity: 1
+		+d
+			width: 145px
+		+t
+			width: 60px
+	&__dot
+		position: absolute
+		top: -7px
+		right: -7px
+		width: 15px
+		height: 15px
+		border-radius: 50% 
+		background: $wh 
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 7px
+			height: 7px
+			background: $wh
+			border-radius: 50%
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.30171)  
+	&__container
+		flex: 0 0 calc(100% - 200px)
+		max-width: calc(100% - 200px)
+		+d
+			flex: 0 0 calc(100% - 140px)
+			max-width: calc(100% - 140px)
+		+t
+			flex: 0 0 calc(100% - 80px)
+			max-width: calc(100% - 80px)
+		+m
+			width: 100%
+			max-width: 100%  
+	&__inner
+		margin: 0 -15px
+		+s
+			margin: 0 -160px  
+	&__slider
+		visibility: hidden
+		&.slick-initialized
+			visibility: visible
+	&__preview
+		font-size: 0
+	&__pic
+		width: 100%
+	&__foot
+		display: flex
+		align-items: center
+		padding-left: 200px
+		+d
+			padding-left: 140px
+		+t
+			padding-left: 30px
+		+m
+			display: block
+			padding: 0
+	&__wrap
+		position: relative
+		flex-grow: 1
+		+m
+			margin-bottom: 56px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: -200px
+			width: 2px
+			height: 80px
+			border-radius: 1px 
+			background: $pink
+			+d
+				left: -140px
+				height: 56px
+			+t
+				left: -30px
+			+m
+				display: none
+	&__info
+		margin-bottom: 40px
+	&__wrap &__text
+		margin-bottom: 40px
+		line-height: (32/18)
+		color: $text-white  
+		+d
+			margin-bottom: 32px
+		strong
+			color: $white
+	&__counter
+		flex-shrink: 0 
+		margin-left: 100px 
+		perspective: 600px
+		+d
+			margin-left: 80px
+		+t
+			margin-left: 60px
+		+m
+			margin: 0 auto
+		&[data-aos]
+			&.aos-animate
+				.details__front
+					transform: rotateX(-180deg)
+					z-index: 1
+				.details__back
+					transform: rotate(0)
+					z-index: 2
+	&__front,
+	&__back
+		-webkit-backface-visibility: hidden
+		-moz-backface-visibility: hidden
+		backface-visibility: hidden
+		border-radius: 50%
+		overflow: hidden
+		transition: transform .75s
+		transform-style: preserve-3d
+	&__front
+		position: relative
+		z-index: 2
+	&__back
+		position: relative
+		z-index: 1
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		width: 402px
+		height: 402px
+		transform: rotateX(180deg)
+		border-radius: 50%
+		// box-shadow: 0px 23px 51px rgba(0, 0, 0, 0.242297)
+		+d
+			width: 283px
+			height: 283px
+		+t
+			width: 240px
+			height: 240px
+		+m
+			width: 310px
+			height: 310px
+	&__number
+		margin-top: -33px 
+	&__category
+		margin-top: -5px
+		+d
+			margin-top: -20px
+			font-size: 18px
+			line-height: (24/18)
+		+t
+			margin-top: 0 
+		+m
+			margin-top: -10px
+	.line
+		top: -138px
+		left: 50px
+		transform: rotate(-90deg)
+		+d
+			top: -220px
+			left: -30px
+			transform: rotate(-90deg) scale(.7)
+		+m
+			display: none
+	.slick-slide
+		padding: 0 15px 
+
+.wrapper
+	position: relative
+	margin-bottom: 51px
+	padding: 152px 0 130px
+	background: linear-gradient(360deg, rgba(255, 255, 255, 0.0001) 0%, rgba(237, 229, 240, 0.504289) 100%)
+	+d
+		margin-bottom: 100px
+		padding: 112px 0 71px
+	+t
+		margin-bottom: 40px
+		padding-top: 90px 
+	+m
+		margin: 0
+		padding: 56px 0 56px 
+	.lines
+		+coverdiv
+		opacity: .3 
+	.line
+		&:first-child
+			top: 0
+			left: calc(50% - 610px) 
+			+d
+				top: -103px 
+				left: calc(50% - 480px) 
+			+t
+				left: 0
+			+m
+				top: -152px
+		&:nth-child(2)
+			top: 770px
+			right: 0
+			+d
+				top: 570px
+				right: -100px
+			+t
+				top: 530px
+			 
+.work
+	margin-bottom: 345px
+	+mac
+		margin-bottom: 280px
+	+d
+		margin-bottom: 200px
+	+t
+		margin-bottom: 140px
+	+m
+		margin-bottom: 80px
+	&__head
+		margin-bottom: 170px
+		+d
+			margin-bottom: 92px
+		+m
+			margin-bottom: 44px
+	&__container
+		position: relative
+		margin-top: -35px
+		background: $wh 
+		border-radius: 48px 
+		+d
+			border-radius: 32px
+		+m
+			margin-top: 0
+			background: none 
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			border-radius: 48px 
+			+m
+				display: none
+		&:before
+			top: 8px
+			bottom: -8px
+			background: rgba($wh, .5)
+		&:after
+			top: 64px
+			bottom: -64px
+			z-index: -2
+			filter: blur(130.478px)
+			background: #EBE6ED
+			+d
+				top: 46px
+				bottom: -46px
+				border-radius: 32px
+				filter: blur(92px)
+	&__slider
+		visibility: hidden
+		&.slick-initialized
+			visibility: visible
+	&__slide
+		+m
+			margin: 12px 0 
+	&__item
+		position: relative
+		min-height: 480px
+		padding: 140px 30px 60px
+		text-align: center
+		+d
+			min-height: 340px
+			padding: 100px 20px 40px 
+		+m
+			display: flex
+			align-items: center
+			min-height: auto 
+			padding: 48px 
+			background: $wh
+			border-radius: 32px  
+		&:before
+			content: ""
+			+coverdiv
+			background: $wh
+			border-radius: 38px
+			transition: all .25s
+			+d
+				border-radius: 32px 
+			+m
+				top: 8px
+				bottom: -8px
+				opacity: .5 
+		&:hover:before
+			transform: scaleY(1.16)
+			background: $primary 
+			+d
+				transform: scaleY(1.1)  
+	&__preview
+		position: relative
+		z-index: 2
+		display: inline-block
+		margin-bottom: 35px
+		font-size: 0
+		+d
+			margin-bottom: 28px
+		+m
+			margin: 0 24px 0 0 
+	&__pic
+		width: 128px
+		+d
+			width: 92px
+	&__category
+		position: relative
+		z-index: 2
+		color: $primary
+		transition: color .25s  
+	&__item:hover &__category
+		color: $wh 
+	.slick-list
+		overflow: visible
+		border-radius: 48px
+		+d
+			border-radius: 32px 
+		+m
+			overflow: hidden
+	.slick-slide
+		visibility: hidden
+		opacity: 0
+		transition: all .25s
+		&.slick-active
+			visibility: visible
+			opacity: 1
+		
+.achievement
+	&__center
+		display: flex
+		+m
+			flex-direction: column-reverse
+	&__container
+		flex-shrink: 0
+		width: 467px
+		+d
+			width: 330px
+		+m
+			width: 100%
+			max-width: 375px
+			margin: 0 auto  
+	&__slider
+		visibility: hidden
+		&.slick-initialized
+			visibility: visible
+	&__slide
+		text-align: center
+	&__group
+		position: relative
+		display: inline-block
+		width: 70%
+		font-size: 0
+	&__preview
+		&:first-child
+			position: relative
+			z-index: 2 
+			display: inline-block
+			width: 100%
+		&:nth-child(2)
+			top: 70px
+			right: -33% 
+			left: -33%
+			width: auto
+		&:nth-child(3)
+			top: -12%
+			right: -19.7%
+			z-index: 3
+			width: 73%
+		+nf
+			position: absolute
+	&__pic
+		width: 100% 
+	&__wrap
+		position: relative
+		z-index: 2
+		padding: 35px 0 0 135px
+		+d
+			padding: 10px 0 0 100px 
+		+t
+			padding: 0 0 0 40px 
+		+m
+			margin-bottom: 60px
+			padding: 0
+	&__stage
+		position: relative
+		margin-bottom: 40px
+		// padding-left: 100px
+		color: $dark 
+		+t
+			margin-bottom: 32px
+			padding: 0
+		+m
+			margin-bottom: 24px
+		.stage__number
+			color: $text-dark
+	&__title
+		margin-bottom: 60px
+		+t
+			margin-bottom: 30px
+		+m
+			margin-bottom: 32px
+		+s
+			max-width: 230px
+	&__text
+		max-width: 320px
+		line-height: 1.7
+		// line-height: 1.3
+		margin-bottom: 30px
+		+d
+			max-width: 275px
+	&__number
+		color: $primary
+	&__info
+		span
+			margin-right: 20px
+	.slick-list
+		overflow: visible
+	.slick-slide
+		visibility: hidden
+		opacity: 0
+		transition: all .25s
+		&.slick-active
+			visibility: visible
+			opacity: 1
+	.slick-dots
+		margin-top: 87px
+		+d
+			margin-top: 55px
+		+t
+			margin-top: 24px
+
+.slick-prev,
+.slick-next
+	width: 64px
+	height: 64px
+	border-radius: 50% 
+	background: $primary
+	font-size: 0
+	transition: opacity .25s
+	+d
+		width: 48px
+		height: 48px
+	.icon
+		font-size: 16px
+		fill: $wh
+		transition: fill .25s
+	&:hover
+		opacity: .85 
+
+// .slick-dots
+//   position: relative
+//   z-index: 3
+//   display: flex
+//   justify-content: center
+//   li
+//     button
+//       position: relative
+//       width: 24px
+//       height: 24px
+//       font-size: 0
+//       &:before
+//         content: ""
+//         position: absolute
+//         top: 50%
+//         left: 50%
+//         width: 8px
+//         height: 8px
+//         transform: translate(-50%,-50%) 
+//         border-radius: 50% 
+//         background: $wh
+//         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.30171) 
+//         transition: all .25s
+//     &.slick-active
+//       button:before
+//         box-shadow: none 
+//         background: linear-gradient(180deg, #3A8FFF 0%, #0837AE 100%) 
+//     +nl
+//       margin-right: 24px
+//       +d
+//         margin-right: 18px
+//       +m
+//         margin-right: 12px
+
+.arrow
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	width: 64px
+	height: 64px
+	border-radius: 50%
+	overflow: hidden
+	border: 2px solid $dark
+	font-size: 0
+	transition: all .25s 
+	+d
+		width: 48px
+		height: 48px
+	&__line
+		display: flex
+		transform: translateX(-43px)
+		transition: transform .35s 
+		.icon
+			font-size: 16px
+			fill: $dark
+			transition: fill .25s 
+			+nl
+				margin-right: 64px
+	&:hover &__line
+		animation: arrowsRight .5s forwards
+	// &:hover
+	//   background: $primary
+	//   border-color: $primary
+	//   .icon
+	//     fill: $wh
+
+.category
+	display: inline-block
+	margin-bottom: 24px
+	padding: 0 23px 
+	border-radius: 20px
+	background: #908CFF  
+	font-size: 14px
+	font-weight: 600 
+	line-height: 40px
+	color: $wh
+	+d
+		border-radius: 16px 
+		line-height: 32px
+	+m
+		padding: 0 16px 
+
+.projects
+	position: relative
+	margin-bottom: 128px
+	background: url('../img/bg-projects.png') no-repeat 100% 192px / 670px auto
+	+d
+		margin-bottom: 91px
+		background-position: 110% 140px  
+		background-size: 500px auto
+	+t
+		background-position: 120% 80px 
+	+m
+		margin-bottom: 74px
+		background: none  
+	&__center
+		+m
+			max-width: 414px
+	&__head
+		margin-bottom: 180px
+		+d
+			margin-bottom: 70px
+		+m
+			margin-bottom: 56px
+		.head__title
+			+t
+				font-size: 60px
+			+m
+				font-size: 40px
+				line-height: 1.2
+	&__body
+		display: flex
+		margin-bottom: 164px
+		+d
+			margin-bottom: 116px
+		+t
+			margin-bottom: 80px
+		+m
+			position: relative
+			flex-direction: column-reverse
+			margin-bottom: 32px
+	&__desc
+		position: relative
+		z-index: 2
+		flex-shrink: 0
+		width: 300px
+		padding-top: 48px
+		+d
+			width: 225px
+			padding-right: 10px
+		+m
+			position: static
+			width: 100%
+			padding: 0 
+	&__category
+		margin-bottom: 24px 
+		+m
+			position: absolute
+			top: 295px
+			left: 25px
+			z-index: 2
+			margin: 0
+	&__pic
+		width: 100%
+	&__body &__preview
+		flex-shrink: 0
+		width: 668px
+		height: 520px
+		background: #D1ECFD 
+		+d
+			width: 470px
+			height: 370px
+		+t
+			width: 430px
+		+m
+			width: 100% 
+			height: 356px
+			margin-bottom: 24px
+			background: #FFCE79 
+	&__body &__img
+		top: 12%
+		left: 10.3%
+		width: 83%
+		+m
+			left: 0
+			right: 0
+			width: 100% 
+	&__preview
+		position: relative
+		border-radius: 24px 
+		font-size: 0
+		+d
+			border-radius: 16px
+	&__body &__info
+		margin-right: -167px
+		margin-bottom: 32px
+		+d
+			margin-bottom: 24px
+		+m
+			margin: 0 0 16px
+	&__text
+		line-height: (32/18)
+		color: $text-light 
+	&__body &__text
+		max-width: 205px
+		+m
+			max-width: 100% 
+	&__arrow
+		position: absolute
+		right: -32px
+		+d
+			right: -24px
+		+m
+			position: static
+			margin-top: 24px
+	&__view
+		position: absolute
+		left: 32px
+		bottom: 32px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 72px
+		height: 72px
+		border-radius: 50%
+		background: $dark
+		font-size: 18px
+		font-weight: 700
+		color: $wh 
+		transition: all .25s
+		+d
+			display: none
+		&:hover
+			background: $primary 
+	&__body &__arrow
+		top: 142px
+		+d
+			top: 100px
+	&__desc &__arrow
+		display: none
+		+m
+			display: inline-flex
+	&__preview &__arrow
+		+m
+			display: none
+	&__item
+		+m
+			display: flex
+			flex-direction: column
+		&:first-child
+			max-width: 366px
+			margin-left: auto
+			+d
+				max-width: 258px
+			+m
+				max-width: 100% 
+			.projects__preview
+				height: 382px
+				background: #E8BEFF 
+				+d
+					height: 270px
+				+m
+					height: 355px
+			.projects__img
+				top: 9%
+				right: 27%
+				width: 128.3%
+				+t
+					right: 5%
+				+m
+					top: 23%
+					right: 5%
+					width: 90%
+			.projects__info,
+			.projects__text
+				max-width: 366px
+				margin-left: auto
+				+m
+					max-width: 100% 
+					margin: 0
+			.projects__info
+				+m
+					margin-bottom: 16px
+		&:nth-child(2)
+			max-width: 470px
+			margin-top: -310px
+			+d
+				max-width: 328px
+				margin-top: -290px
+			+t
+				max-width: 300px
+			+m
+				max-width: 100% 
+				margin: 32px 0 0 
+			.projects__preview
+				height: 500px
+				background: #FFCE79
+				+d
+					height: 356px
+			.projects__img
+				top: 15%
+				left: 12%
+				width: 71%
+				+m
+					top: 18%
+		&:nth-child(3)
+			max-width: 467px
+			margin: 0 100px 0 auto 
+			+mac
+				margin-right: 50px
+			+d
+				max-width: 328px
+			+t
+				margin-right: 0
+			+m
+				margin: 32px 0 0 
+			.projects__preview
+				height: 506px
+				background: #D1ECFD 
+				+d
+					height: 356px
+			.projects__img
+				top: 11%
+				left: 13%
+				width: 72.8%
+		&:nth-child(4)
+			max-width: 366px
+			margin: -366px auto 0 100px 
+			+mac
+				margin-left: 50px
+			+d
+				max-width: 260px
+				margin-top: -310px
+			+t
+				margin-left: 0
+			+m
+				max-width: 100% 
+				margin: 32px 0 0 
+			.projects__preview
+				height: 506px
+				background: #FFADD0
+				+d
+					height: 356px 
+				+m
+					background: #FFCE79 
+			.projects__img
+				top: 19%
+				left: 0
+				right: 0
+				width: 100%
+				+m
+					top: 11%
+	&__img
+		position: absolute
+		pointer-events: none
+	&__item &__info
+		margin-bottom: 40px
+		+m
+			margin-bottom: 16px
+	&__item &__preview
+		margin-bottom: 40px
+		+m
+			order: -1
+			margin-bottom: 24px
+	&__item &__text
+		max-width: 366px
+	&__item &__arrow
+		bottom: 64px
+		+d
+			bottom: 60px
+	&__item > &__arrow
+		display: none
+		+m
+			display: inline-flex
+	&__btn
+		display: none
+		+m
+			display: block
+			margin-top: 48px
+			.btn
+				min-width: 100%
+	.lines
+		+coverdiv
+		z-index: -1
+		opacity: .3 
+		+m
+			display: none
+	.line
+		&:first-child
+			top: 600px
+			left: -50px 
+			transform: rotate(-90deg)
+			+d
+				top: 410px
+				transform: rotate(-90deg) scale(.7)
+		&:nth-child(2)
+			top: 1650px
+			right: 120px
+			transform: rotate(-45deg)
+			+d
+				top: 970px
+				right: -100px
+				transform: rotate(-90deg) scale(.7)
+
+.talent
+	margin-bottom: 158px
+	+d
+		margin-bottom: 90px
+	+m
+		margin-bottom: 70px
+	&__container
+		position: relative
+		padding: 134px 0
+		border-radius: 40px
+		background: $primary  
+		color: $wh 
+		+d
+			padding: 80px 0
+			border-radius: 28px 
+		+m
+			padding: 64px 40px 450px  
+		&:before
+			content: ""
+			position: absolute
+			top: 48px
+			left: -63px
+			bottom: 48px
+			z-index: -1
+			width: 160px
+			border-radius: 40px
+			background: #D1ECFD  
+			+d
+				left: -55px
+				border-radius: 28px 
+			+t
+				left: -25px 
+			+m
+				display: none
+	&__figure
+		position: absolute
+		top: 48px
+		right: -64px
+		width: 490px
+		font-size: 0
+		+d
+			top: 24px
+			width: 358px
+		+t
+			top: 60px
+			right: -30px
+			width: 300px
+		+m
+			top: auto
+			bottom: -30px
+			right: -32px
+			width: 270px
+	&__wrap
+		position: relative
+		z-index: 3
+		max-width: 367px
+		margin-left: 602px
+		+d
+			max-width: 260px
+			margin-left: 52%
+		+m
+			max-width: 100%
+			margin-left: 0 
+	&__stage
+		margin-bottom: 24px
+		color: $wh 
+	&__title
+		margin-bottom: 52px
+		+d
+			margin-bottom: 32px
+	&__btn
+		min-width: 201px
+		+d
+			min-width: 143px
+			height: 46px
+	&__bg
+		position: absolute
+		top: 16%
+		left: calc(50% - 415px)
+		width: 720px
+		pointer-events: none
+		font-size: 0
+		+d
+			left: calc(50% - 305px)
+			width: 500px
+		+m
+			top: auto
+			left: 12%
+			bottom: 40px
+			z-index: 2
+			width: 450px
+		&[data-aos]
+			.talent__preview
+				opacity: 0
+				transition: all .7s 
+				&:first-child
+					transform: translateY(60px)
+				&:nth-child(2)
+					transform: scale(.7)
+					transition-delay: .2s 
+				&:nth-child(3)
+					transform: translate(40px,-40px) rotate(15deg)
+					transition-delay: .4s 
+				&:nth-child(4)
+					transform: translate(-40px,60px)
+					transition-delay: .6s 
+				&:nth-child(5)
+					transform: translateX(-50px) scale(1.4)
+					transition-delay: .8s
+			&.aos-animate
+				.talent__preview
+					opacity: 1
+					&:first-child
+						transform: translateY(0)
+					&:nth-child(2)
+						transform: scale(1)
+					&:nth-child(3)
+						transform: translate(0,0) rotate(0)
+					&:nth-child(4)
+						transform: translate(0,0)
+					&:nth-child(5)
+						transform: translateX(0) scale(1)
+	&__preview
+		&:nth-child(2)
+			top: 18.3%
+			left: 13%
+			width: 37.5%
+		&:nth-child(3)
+			top: -14%
+			left: 14.5%
+			width: 53%
+		&:nth-child(4)
+			left: -16%
+			bottom: -7.5%
+			width: 44%
+		&:nth-child(5)
+			top: 7%
+			left: -10%
+			width: 40px
+		+nf
+			position: absolute
+	&__pic
+		width: 100% 
+	&_case
+		margin-bottom: 129px
+		+m
+			position: relative
+			z-index: 2
+			margin-bottom: 95px
+	
+.jobs
+	position: relative
+	padding: 128px 0
+	background: linear-gradient(360deg, rgba(255, 255, 255, 0.0001) 0%, rgba(237, 229, 240, 0.504289) 100%)
+	+d
+		padding: 86px 0 82px 
+	+m
+		padding: 56px 0 48px
+	&__center
+		display: flex
+		+m
+			display: block
+	&__wrap
+		position: relative
+		padding: 0 60px 0 100px
+		flex-grow: 1
+		+t
+			padding: 0 50px 0 0
+		+m
+			margin-bottom: 48px
+			padding: 0 
+	&__stage
+		margin-bottom: 24px
+	&__title
+		margin-bottom: 41px
+		+m
+			margin-bottom: 24px
+	&__list
+		flex-shrink: 0
+		width: 568px 
+		overflow: hidden
+		+d
+			width: 400px
+		+m
+			width: 100%
+			overflow: visible 
+	&__info
+		max-width: 367px
+		margin-bottom: 72px
+		line-height: (32/18) 
+		color: $text-light
+		+m
+			max-width: 100%
+			margin: 0  
+	&__scroll
+		display: inline-flex
+		align-items: center
+		font-weight: 600 
+		line-height: (24/18) 
+		color: $text-dark 
+		+m
+			display: none
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 48px
+		height: 48px
+		margin-right: 16px
+		border-radius: 50% 
+		background: $secondary  
+		overflow: hidden
+		font-size: 0
+		+d
+			width: 40px
+			height: 40px
+	&__arrows
+		display: flex
+		transform: translateX(-43px)
+		transition: transform .35s 
+	&__arrows &__pic
+		+nl
+			margin-right: 64px
+	&__scroll:hover &__arrows
+		animation: arrowsRight .4s forwards
+	&__item
+		display: block
+		margin-bottom: 21px
+		+d
+			margin-bottom: 16px
+	&__inner
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+		height: 247px
+		padding: 3px 250px 0 64px
+		border-radius: 40px
+		box-shadow: 0 5px 20px #EDEDED 
+		background: $wh
+		transition: all .25s
+		+d
+			height: 175px
+			padding: 0 165px 0 32px
+			border-radius: 28px 
+		+m
+			padding: 0 40px 
+		&:hover
+			background: $dark
+			.icon
+				fill: $wh
+	&__preview
+		position: absolute
+		top: 16px
+		right: 16px
+		bottom: 16px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 215px
+		padding: 20px 
+		border-radius: 40px 
+		background: $primary 
+		font-size: 0
+		visibility: hidden
+		opacity: 0
+		transition: all .25s
+		+d
+			top: 12px
+			right: 12px
+			bottom: 12px
+			width: 150px
+		+t
+			visibility: visible
+			opacity: 1
+		+m
+			display: none
+	&__item:hover &__preview
+		visibility: visible
+		opacity: 1
+	&__preview &__pic
+		max-width: 100%
+		max-height: 100%  
+	&__vacancy
+		position: relative
+		z-index: 2
+		display: inline-block
+		margin-bottom: 4px
+		color: $dark
+		transition: color .25s 
+	&__item:hover &__vacancy
+		color: $wh 
+	&__counter
+		position: absolute
+		top: 5px
+		left: calc(100% + 15px)
+		min-width: 32px
+		border-radius: 50%
+		background: linear-gradient(180deg, #3A8FFF 0%, #0837AE 100%) 
+		text-align: center
+		line-height: 32px
+		font-size: 14px
+		font-weight: 600
+		color: $wh 
+		+d
+			min-width: 24px
+			line-height: 24px
+			font-size: 13px
+	&__item &__text
+		margin-bottom: 30px
+		line-height: (32/18)
+		color: $text-light 
+		transition: color .25s
+		+d
+			margin-bottom: 10px
+	&__item:hover &__text
+		color: $text-dark 
+	.icon
+		font-size: 16px
+		fill: $dark
+		transition: fill .25s  
+	.line
+		top: 0
+		left: calc(50% - 395px)
+		opacity: .3 
+		+d
+			top: -103px
+			left: calc(50% - 335px)
+		+m
+			top: -152px
+			left: 100px
+		
+@keyframes arrowsRight
+	100%
+		transform: translateX(43px)
+
+.team
+	padding: 108px 0 123px
+	+d
+		padding: 85px 0 93px 
+	+m
+		padding-top: 80px
+	&__title
+		margin-bottom: 35px
+		text-align: center
+		+m
+			margin-bottom: 24px
+			text-align: left
+	&__info
+		max-width: 780px
+		margin: 0 auto 100px
+		text-align: center
+		+d
+			max-width: 550px
+			margin-bottom: 80px
+		+m
+			margin-bottom: 50px
+			text-align: left
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: -100px -50px 0
+		+d
+			margin: -100px -30px 0 
+		+m
+			display: block
+			margin: 0
+	&__item
+		flex: 0 0 calc(33.333% - 100px)
+		width: calc(33.333% - 100px)
+		margin: 100px 50px 0
+		text-align: center
+		+d
+			flex: 0 0 calc(33.333% - 60px)
+			width: calc(33.333% - 60px)
+			margin: 100px 30px 0
+		+t
+			flex: 0 0 calc(50% - 60px)
+			width: calc(50% - 60px)
+		+m
+			width: 100%
+			margin: 0
+			+nl
+				margin-bottom: 78px
+	&__ava
+		width: 250px
+		height: 250px
+		margin: 0 auto 45px
+		img
+			width: 100%
+			min-height: 100%
+			// border-radius: 50%
+	&__author
+		margin-bottom: 13px
+		font-size: 20px
+		line-height: 1.2
+		font-weight: 600
+	&__text
+		margin: 25px 0 0 0
+		font-size: 20px
+		line-height: 1.5
+		// text-align: left
+		+d
+			text-align: left
+	&__position
+		margin-bottom: 18px
+		color: $text3  
+	&__social
+		display: flex
+		justify-content: center
+		align-items: center
+	&__link
+		display: flex
+		justify-content: center
+		align-items: center
+		.icon
+			width: 25px
+			height: 25px
+			fill: $text1
+			transition: fill .2s 
+		&:hover
+			.icon
+				fill: $primary
+		+nl
+			margin-right: 27px
+	&__btns
+		margin-top: 107px
+		text-align: center
+		+m
+			margin-top: 92px
+		p
+			margin-bottom: 45px	
+			font-weight: 600
+	&__btn
+		padding: 0 30px 0 30px
+		// +a
+		// 	height: 101px
+		// 	line-height: 1.5
+
++dark
+	.team
+		&__link
+			.icon
+				width: 25px
+				height: 25px
+				fill: $white
+				transition: fill .2s 
+			&:hover
+				.icon
+					fill: $primary
+		
+
+.slider
+	padding: 105px 0 127px
+	+d
+		padding: 90px 0 
+	+m
+		padding: 68px 0 
+	&__center
+		max-width: 1228px
+	&__title
+		margin-bottom: 35px
+		text-align: center
+		+d
+			margin-bottom: 25px
+		+m
+			text-align: left
+	&__info
+		max-width: 800px
+		margin: 0 auto 72px
+		text-align: center
+		+d
+			max-width: 540px
+		+m
+			margin-bottom: 42px
+			text-align: left
+	&__slider
+		visibility: hidden
+		&.slick-initialized
+			visibility: visible 
+	&__preview
+		+shadow4
+		img
+			width: 100%
+			border-radius: 15px
+	.slick-list
+		overflow: visible 
+	.slick-slide
+		border-radius: 15px 
+		opacity: 0
+		transition: all .4s
+		&.slick-active
+			opacity: 1
+
+.slider
+	.slick-arrow
+		position: absolute
+		top: 50%
+		z-index: 3
+		width: 80px
+		height: 80px
+		transform: translateY(-50%)
+		border-radius: 50%
+		background: $dark  
+		font-size: 0
+		transition: background .2s 
+		+d
+			width: 68px
+			height: 68px
+		svg
+			width: 26px
+			height: 26px
+			+d
+				width: 20px
+				height: 20px
+		path
+			fill: $primary
+			transition: fill .2s
+		&:hover
+			background: $primary
+			path
+				fill: $white
+
+	+dark
+		.slick-arrow
+			background: $primary
+			path
+				fill: $white
+			&:hover
+				background: darken($primary, 5) 
+				
+	.slick-next
+		right: -40px
+		+d
+			right: -34px
+	.slick-prev
+		left: -40px
+		+d
+			left: -34px
+
+	.slick-dots
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 40px
+		li
+			font-size: 0
+			button
+				width: 8px
+				height: 8px
+				border-radius: 4px
+				background: $primary
+				opacity: .2 
+				font-size: 0
+				transition: all .2s
+			&.slick-active
+				button
+					width: 19px
+					opacity: 1
+			+nl
+				margin-right: 9px
+	
+.partners
+	padding: 108px 0
+	+d
+		padding: 75px 0 80px
+	&__title
+		max-width: 730px
+		margin: 0 auto 21px 
+		text-align: center
+		+d
+			max-width: 542px
+		+m
+			text-align: left
+	&__info
+		max-width: 822px
+		margin: 0 auto 88px
+		text-align: center
+		+d
+			max-width: 540px
+			margin-bottom: 54px
+		+m
+			max-width: 100%
+			margin-bottom: 44px
+			text-align: left 
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -12px
+		+m
+			display: block
+			margin: 0
+			visibility: hidden
+			&.slick-initialized
+				visibility: visible 
+	&__item
+		flex: 0 0 calc(33.333% - 24px)
+		width: calc(33.333% - 24px)
+		margin: 0 12px
+		text-align: center 
+		+m
+			width: 100%
+			margin: 0 
+	&__logo
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 231px
+		margin-bottom: 22px
+		border-radius: 15px
+		background: $white
+		+d
+			height: 152px
+			padding: 20px 
+		img
+			max-width: 210px
+	&__text
+		line-height: 2
+		color: $text3
+		+d
+			font-size: 14px 
+
++dark
+	.partners
+		&__logo
+			background: $dark2 
+
+.about
+	&__center
+		max-width: 1440px
+		padding: 0 72px
+		+d
+			padding: 0 49px 
+	&__container
+		position: relative
+		background: $primary
+		border-radius: 40px
+		color: $wh
+		+d
+			border-radius: 28px
+		+m
+			border-radius: 24px  
+	&__btns
+		margin-top: 45px
+	&__head
+		position: relative
+		z-index: 1
+		padding: 128px 0 176px
+		border-bottom: 1px solid rgba($wh, .2)  
+		text-align: center
+		+mac
+			padding-bottom: 140px
+		+d
+			padding: 91px 0 81px 
+		+t
+			padding: 50px 0 
+		+m
+			padding: 48px 40px 40px 
+	&__logo
+		margin-bottom: 40px
+		font-size: 0
+		+t
+			margin-bottom: 32px
+		+m
+			display: none
+	&__logo &__pic
+		width: 24px
+	&__hello
+		margin-bottom: 40px
+		font-weight: 600 
+		+t
+			margin-bottom: 32px
+		+m
+			margin-bottom: 40px
+		span
+			margin-right: 12px
+	&__info
+		max-width: 568px
+		margin: 0 auto
+		+d
+			max-width: 404px
+		+m
+			font-size: 18px
+			line-height: (24/18) 
+	&__row
+		position: relative
+		z-index: 2
+		display: flex
+		+m
+			display: block
+	&__col
+		flex: 0 0 50%
+		width: 50%
+		padding: 120px 50px 175px 
+		+d
+			padding: 85px 50px 110px 
+		+t
+			padding: 50px 30px 60px 
+		+m
+			width: 100%
+			padding: 40px 24px 32px  
+		&:nth-child(2)
+			border-left: 1px solid rgba($wh, .2) 
+			+m
+				display: none
+	&__title
+		max-width: 370px
+		margin: 0 68px 0 auto
+		+d
+			max-width: 258px
+			margin-right: 27px
+		+t
+			margin-right: 0
+		+m
+			max-width: 100% 
+			margin: 0 0 40px 
+			text-align: center
+			font-size: 32px
+			line-height: (40/32) 
+	&__box
+		max-width: 465px
+		margin-left: 68px
+		+d
+			max-width: 330px
+			margin-left: 38px
+		+t
+			margin-left: 0
+	&__btn
+		display: none
+		+m
+			display: block
+			.btn
+				min-width: 100% 
+	&__icon
+		margin-bottom: 29px
+		font-size: 0
+		+d
+			margin-bottom: 20px
+	&__head &__icon
+		display: none
+		+m
+			display: block
+			margin-right: -35px
+			margin-bottom: 6px
+	&__icon &__pic
+		width: 103px
+		+d
+			width: 73px
+	&__line
+		display: flex
+		align-items: center
+	&__text
+		flex-grow: 1
+	&__arrow
+		position: relative
+		flex-shrink: 0 
+		margin: -13px 0 0 34px
+		border-color: $wh
+		.icon
+			fill: $wh
+	.line
+		top: 0
+		left: 120px
+		z-index: 0
+		opacity: .1 
+		+d
+			top: -103px 
+			left: 0
+		+m
+			top: -152px
+			left: -40px
+
+.footer
+	position: relative
+	overflow: hidden
+	+m
+		padding: 80px 0 34px
+	&__center
+		position: relative
+		z-index: 2
+	&__body
+		padding: 128px 0 48px
+		border-bottom: 1px solid #D8D8D8  
+		text-align: center
+		+d
+			padding: 70px 0 50px 
+		+m
+			margin-bottom: 32px
+			padding: 0 
+			border: none 
+	&__logo
+		margin-bottom: 48px
+		display: inline-block
+		font-size: 0
+		+d
+			margin-bottom: 32px
+	&__logo &__pic
+		width: 191px
+		+d
+			width: 161px
+	&__body &__text
+		max-width: 565px
+		margin: 0 auto 50px 
+		line-height: (32/18)
+		color: $text-light
+		+d
+			max-width: 505px
+			margin-bottom: 28px
+			font-size: 14px
+			line-height: (18/14) 
+	&__menu
+		display: flex
+		justify-content: center
+	&__menu &__link
+		font-weight: 600
+		color: $text-dark
+		transition: color .25s
+		&:hover
+			color: $primary 
+		+nl
+			margin-right: 64px
+			+d
+				margin-right: 54px
+			+m
+				margin-right: 40px
+	&__bottom
+		display: flex
+		align-items: center
+		padding: 32px 0
+		font-size: 14px
+		line-height: (18/14)
+		font-weight: 600 
+		+d
+			padding: 25px 0
+			font-size: 12px
+		+m
+			flex-direction: column-reverse
+			padding: 0 
+	&__copyright
+		margin-right: auto
+		color: #ADADAD  
+		+d
+			font-size: 12px
+		+m
+			margin: 32px 0 0
+			text-align: center 
+	&__social
+		display: flex
+		align-items: center
+	&__social &__text
+		margin-right: 40px
+		color: $primary
+		+d
+			margin-right: 24px
+		+m
+			display: none
+	&__list
+		display: flex
+		align-items: center
+	&__list &__link
+		font-size: 0
+		+m
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-shrink: 0
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			border: 1px solid #D8D8D8   
+		.icon
+			font-size: 16px
+			fill: #ADADAD
+			transition: fill .25s
+			+m
+				font-size: 12px
+			&-youtube
+				font-size: 12px
+				+m
+					font-size: 10px
+			&:hover
+				fill: $primary
+		+nl
+			margin-right: 40px
+			+m
+				margin-right: 8px
+	.line
+		top: 0
+		right: calc(50% - 690px) 
+		opacity: .75 
+		+d
+			top: -133px
+			right: -100px
+		+m
+			top: -150px
+			right: auto
+			left: -200px
+
+.case
+	position: relative
+	padding: 222px 0 99px
+	+d
+		padding: 158px 0 96px 
+	+m
+		padding: 118px 0 420px 
+	&__wrap
+		position: relative
+		z-index: 3
+		max-width: 400px
+		+m
+			max-width: 100% 
+	&__arrows
+		margin-bottom: 108px
+		+d
+			margin-bottom: 86px
+		+t
+			margin-bottom: 40px
+		+m
+			display: none
+	&__category
+		margin-bottom: 24px
+		background: #FFBA79 
+		+d
+			margin-bottom: 16px
+	&__title
+		margin-bottom: 25px
+		+m
+			margin-bottom: 16px
+			font-size: 64px
+			line-height: (72/64) 
+	&__info
+		max-width: 266px
+		margin-bottom: 148px 
+		+d
+			margin-bottom: 115px
+		+t
+			margin-bottom: 56px
+		+m
+			max-width: 200px
+			margin-bottom: 32px
+	&__list
+		display: flex
+	&__item
+		font-weight: 600
+		color: $primary 
+		+m
+			max-width: 120px 
+		+nl
+			margin-right: 58px
+			+d
+				margin-right: 40px
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 40px
+		height: 40px
+		margin-bottom: 16px
+		border-radius: 50%
+		background: #908CFF
+		font-size: 0  
+	&__bg
+		position: absolute
+		top: 320px
+		right: calc(50% - 620px) 
+		width: 745px
+		font-size: 0
+		+x
+			width: 700px
+		+d
+			top: 250px
+			right: calc(50% - 450px) 
+			width: 550px
+		+t
+			right: calc(50% - 350px)
+			width: 400px
+		+m
+			top: auto
+			right: calc(50% - 200px)
+			bottom: 70px
+			width: 380px
+	&__bg &__pic
+		width: 100%
+	&__preview
+		position: relative
+		z-index: 2
+	&__figure
+		position: absolute
+		top: -18%
+		right: -3.5%
+		width: 76%
+	& > .line
+		top: 0
+		left: calc(50% - 425px)
+		+d
+			top: -110px
+			left: calc(50% - 365px)
+		+t
+			left: 100px
+		+m
+			top: -160px
+			left: 75px
+		path
+			animation: dash 2.7s .8s linear forwards
+
+.overview
+	position: relative
+	padding: 135px 0 222px 
+	+d
+		padding: 112px 0 135px 
+	+t
+		padding: 60px 0 110px 
+	+m
+		padding-bottom: 70px
+	&__center
+		display: flex
+		+m
+			display: block
+	&__container
+		flex-shrink: 0
+		width: 470px
+		+d
+			width: 328px
+		+t
+			width: 300px
+		+m
+			margin: 0 auto 40px 
+		+s
+			width: 100% 
+	&__slider
+		visibility: hidden
+		&.slick-initialized
+			visibility: visible
+	&__preview
+		font-size: 0
+	&__preview &__pic
+		width: 100% 
+	&__wrap
+		flex-grow: 1
+		margin-top: -14px
+		padding-left: 133px
+		+mac
+			padding-left: 80px
+		+d
+			padding-left: 95px
+		+t
+			padding-left: 50px
+		+m
+			padding: 0
+	&__stage
+		margin-bottom: 24px
+		.stage__number
+			color: $text-dark
+	&__title
+		margin-bottom: 48px
+		+d
+			margin-bottom: 40px
+	&__text
+		margin-bottom: 40px
+		line-height: (32/18)
+		color: $text-dark
+	&__info
+		max-width: 370px
+		margin-bottom: 79px
+		+d
+			margin-bottom: 40px
+		+m
+			margin-bottom: 32px
+	&__list
+		display: flex
+		margin: 0 -18px
+		+d
+			margin: 0 -12px
+		+m
+			display: block
+			margin: 0 
+	&__item
+		flex: 0 0 calc(50% - 36px)
+		width: calc(50% - 36px)
+		margin: 0 18px
+		+d
+			flex: 0 0 calc(50% - 24px)
+			width: calc(50% - 24px)
+			margin: 0 12px
+		+m
+			width: 100%
+			margin: 0 
+		+nl
+			+m
+				margin-bottom: 22px
+	&__inner
+		position: relative
+		padding: 80px 40px 
+		border-radius: 48px
+		border: 1px solid #D8D8D8
+		text-align: center 
+		transition: all .25s
+		+mac
+			padding: 70px 20px
+		+d
+			padding: 56px 20px 
+			border-radius: 32px
+		+t
+			padding: 32px 10px 
+		+m
+			padding: 56px 24px  
+		&:before
+			content: ""
+			position: absolute
+			top: 8px
+			left: 0
+			right: 0
+			bottom: -8px
+			z-index: -1
+			background: #EDEDED
+			filter: blur(130.478px)
+			border-radius: 48px 
+			opacity: 0
+			transition: opacity .25s 
+			+d
+				filter: blur(92.784px)
+				border-radius: 32px 
+		&:hover
+			background: $wh 
+			border-color: $wh 
+			&:before
+				opacity: 1
+	&__icon
+		display: inline-block
+		margin-bottom: 40px
+		font-size: 0
+		+d
+			margin-bottom: 28px
+	&__icon &__pic
+		width: 128px
+		+d
+			width: 92px
+	&__category
+		color: $primary
+		+t
+			font-size: 16px
+		+m
+			font-size: 18px
+	.slick-dots
+		margin-top: 60px
+		+m
+			margin-top: 20px
+	.slick-slide
+		visibility: hidden
+		opacity: 0
+		transition: all .25s
+		&.slick-active
+			visibility: visible
+			opacity: 1 
+
+.quality
+	position: relative
+	padding-top: 130px
+	padding-bottom: 60px
+	color: $wh 
+	+d
+		padding-top: 98px
+	+m
+		padding-top: 56px
+	&__head
+		margin-bottom: 96px
+		+x
+			margin-bottom: 70px
+		+d
+			margin-bottom: 40px
+		.stage
+			color: $wh
+		.stage__number
+			color: $text-dark
+	&__list
+		display: flex
+		margin-bottom: 70px
+		padding-left: 200px
+		+d
+			margin-bottom: 56px
+			padding-left: 140px
+		+t
+			padding-left: 80px
+		+m
+			flex-direction: column-reverse
+			padding: 0
+	&__item
+		max-width: 267px
+		+d
+			max-width: 190px
+		+m
+			max-width: 100% 
+		&:first-child
+			margin-top: 150px 
+			+d
+				margin-top: 110px
+			+m
+				margin: 0
+		+nl
+			margin-right: 134px
+			+d
+				margin-right: 93px
+			+m
+				margin: 40px 0 0
+	&__number
+		margin-right: -50px
+		margin-bottom: 8px
+	&__category
+		margin-bottom: 64px
+		+d
+			margin-bottom: 32px
+	&__info
+		margin-bottom: 28px
+		padding-top: 64px
+		border-top: 1px solid $text-light 
+		line-height: (32/18)
+		color: $text-dark
+		+d
+			margin-bottom: 12px
+			padding-top: 32px
+	&__download
+		display: inline-flex
+		align-items: center
+		font-weight: 600 
+		line-height: (24/18) 
+		color: $wh 
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 48px
+		height: 48px
+		margin-right: 16px
+		border-radius: 50% 
+		background: $primary 
+		overflow: hidden
+		font-size: 0
+	&__arrows
+		display: flex
+		flex-direction: column
+		transform: translateY(-43px)
+		transition: transform .35s 
+	&__arrows &__pic
+		+nl
+			margin-bottom: 64px
+	&__download:hover &__arrows
+		animation: arrowsDown .5s forwards 
+	&__nav
+		position: relative
+		display: flex
+		max-width: 667px
+		margin-left: 200px
+		margin-bottom: 128px
+		+d
+			max-width: 426px
+			margin-left: 140px
+			margin-bottom: 56px
+		+t
+			margin-left: 80px
+		+m
+			display: none
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			height: 1px
+			background: $text-light  
+	&__link
+		position: relative
+		padding-top: 40px
+		font-weight: 600
+		color: $text-dark
+		transition: color .25s
+		+d
+			padding-top: 24px
+		&:before
+			content: ""
+			position: absolute 
+			top: -2px
+			left: 50%
+			transform: translateX(-50%)
+			width: 5px
+			height: 5px
+			background: $wh
+			border-radius: 50%  
+			transition: all .25s
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: 50%
+			height: 1px
+			background: $wh  
+		&.active
+			color: $wh
+			&:before
+				transform: scale(1.85)
+				box-shadow: 0 0 0 2px $primary  
+		+nl
+			margin-right: auto 
+		&:first-child
+			&:before
+				left: -2px
+				transform: translateX(0)
+		&:nth-child(2)
+			&.active:after
+				width: 236px
+				+d
+					width: 160px
+		&:nth-child(3)
+			&.active:after
+				width: 440px
+				+d
+					width: 283px
+		&:nth-child(4)
+			&.active:after
+				width: 664px
+				+d
+					width: 427px
+		&:last-child
+			margin-right: -50px
+	&__container
+		position: relative
+		z-index: 3
+		margin-bottom: -168px
+		padding: 0 100px
+		+d
+			margin-bottom: -115px
+			padding: 0 70px
+		+m
+			position: relative
+			margin: 0 -80px -32px
+			padding: 0  
+	&__select
+		display: none
+		position: absolute
+		top: 0
+		right: 80px
+		z-index: 2
+		min-width: 144px
+		height: 48px
+		padding: 0 60px 0 24px 
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		border: none
+		border-radius: 8px 
+		background: #303055 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath fill-rule='evenodd' d='M.293.293a1 1 0 0 1 1.414 0L5 3.586 8.293.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z' fill='%23fff'/%3E%3C/svg%3E") no-repeat calc(100% - 18px) 50% / 10px 6px
+		+font-family
+		font-size: 14px
+		font-weight: 600 
+		color: $wh
+		&::-ms-expand
+			display: none
+		&:-moz-focusring
+			color: transparent
+			text-shadow: 0 0 0 #000 
+		+m
+			display: block
+	&__slider
+		visibility: hidden
+		+m
+			padding-top: 124px
+		&.slick-initialized
+			visibility: visible
+	&__preview
+		font-size: 0
+	&__preview &__pic
+		width: 100% 
+	.line
+		top: -138px
+		left: 50px
+		transform: rotate(-90deg)
+		+d
+			top: -220px
+			left: -30px
+			transform: rotate(-90deg) scale(.7)
+		+m
+			display: none
+	.slick-slide
+		visibility: hidden
+		opacity: 0
+		transition: all .25s
+		&.slick-active
+			visibility: visible
+			opacity: 1 
+	.slick-prev,
+	.slick-next
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		+m
+			top: 0
+			transform: translateY(0)
+	.slick-prev
+		left: -100px
+		+d
+			left: -70px
+		+m
+			left: 80px
+	.slick-next
+		right: -100px
+		+d
+			right: -70px
+		+m
+			right: auto
+			left: 144px
+
+.advantages
+	position: relative
+	padding: 357px 0 137px 
+	background-color: $wh 
+	background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.0001) 0%, rgba(237, 229, 240, 0.504289) 100%)
+	+d
+		padding: 230px 0 120px 
+	+m
+		padding: 100px 0 64px
+	&__center
+		position: relative
+		z-index: 1
+		display: flex
+		+m
+			display: block
+	&__wrap
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		flex-grow: 1
+		padding: 0 135px 0 100px
+		+mac
+			padding: 0 80px 
+		+d
+			padding: 0 94px 0 70px 
+		+t
+			padding: 0 50px 0 0
+		+m
+			margin-bottom: 56px
+			padding: 0 
+	&__stage
+		margin-bottom: 24px
+		.stage__number
+			color: $text-dark 
+	&__title
+		margin-bottom: 48px
+		+d
+			margin-bottom: 24px
+	&__box
+		position: relative
+		flex-shrink: 0
+		width: 568px
+		+d
+			width: 401px
+		+t
+			width: 350px
+		+m
+			width: auto
+			margin: 0 -16px  
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			border-radius: 40px
+			+d
+				border-radius: 28px 
+		&:before
+			top: 8px
+			bottom: -8px
+			z-index: 2
+			background: rgba($wh, .5)
+		&:after
+			top: 80px
+			bottom: -80px
+			z-index: 1
+			background: #EDEDED
+			filter: blur(130.478px)
+			+d
+				top: 56px
+				bottom: -56px
+				// filter: blur(92.784px)
+	&__inner
+		position: relative
+		z-index: 3
+		padding: 80px 
+		border-radius: 40px
+		background: $wh 
+		+d
+			padding: 64px 50px 54px
+			border-radius: 28px 
+		+t
+			padding: 55px 30px
+		+m
+			padding: 36px 24px    
+	&__info
+		margin-bottom: 40px
+		line-height: (32/18)
+		color: $text-dark
+		+d
+			margin-bottom: 0
+	&__number
+		color: $primary
+	&__category
+		display: inline-block
+		margin-top: 5px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: calc(100% + 80px)
+			width: 20px
+			height: 3px
+			background: $primary
+			+m
+				left: calc(100% + 52px)
+				width: 14px
+				height: 2px
+	&__list
+		margin-bottom: 69px 
+		+d
+			margin-bottom: 48px 
+	&__item
+		display: flex
+		align-items: center
+		+nl
+			margin-bottom: 80px
+			+d
+				margin-bottom: 48px
+			+m
+				margin-bottom: 40px
+	&__preview
+		margin-right: 40px
+		font-size: 0
+		+t
+			margin-right: 24px
+	&__preview &__pic
+		width: 96px
+		+d
+			width: 68px
+	&__btn .btn
+		min-width: 100% 
+	.line
+		top: 0px
+		left: calc(50% - 600px) 
+		z-index: 0
+		opacity: .3 
+		+d
+			top: -50px
+			left: 0
+		+m
+			left: 100px
+
+.cases
+	position: relative
+	margin-bottom: 290px
+	+x
+		margin-bottom: 230px
+	+d
+		margin-bottom: 115px
+	+m
+		margin-bottom: 70px
+	&__head
+		margin-bottom: 96px
+		+mac
+			padding-left: 160px
+		+d
+			margin-bottom: 64px
+		+m
+			margin-bottom: 40px
+		.head__title
+			+m
+				max-width: 100% 
+		.head__text
+			+d
+				margin-top: 24px
+		.arrows
+			margin-right: 80px
+			padding-top: 60px
+			+d
+				margin-right: 0
+			+m
+				padding-top: 32px
+	&__container
+		max-width: 1070px
+		padding-left: 200px
+		+mac
+			padding-left: 160px
+		+d
+			padding-left: 140px
+		+t
+			padding: 0
+	&__inner
+		margin: 0 -66px
+		+d
+			margin: 0 -48px  
+	&__slider
+		visibility: hidden
+		&.slick-initialized
+			visibility: visible
+	&__item
+		margin: 0 66px
+		+d
+			margin: 0 48px 
+	&__preview
+		position: relative
+		margin-bottom: 40px
+		font-size: 0
+		+d
+			margin-bottom: 32px
+		+m
+			margin-right: 24px
+			margin-bottom: 24px
+	&__pic
+		width: 100% 
+	&__category
+		position: absolute
+		top: 40px
+		left: -40px
+		+d
+			top: 24px
+			left: -24px
+	&__arrow
+		position: absolute
+		right: -32px
+		bottom: 64px
+		+d
+			right: -24px
+			bottom: 44px
+	&__title
+		margin-bottom: 23px
+		+d
+			margin-right: -32px
+		+m
+			margin-right: 0
+	&__text
+		line-height: (32/18)
+		color: $text-light 
+	.line
+		top: 650px
+		left: -50px 
+		transform: rotate(-90deg)
+		opacity: .3
+		+d
+			top: 400px 
+		+m
+			display: none
+	.slick-list
+		overflow: visible
+	.slick-slide
+		visibility: hidden
+		opacity: 0
+		transition: all .25s
+		&.slick-active
+			visibility: visible
+			opacity: 1
+
+[data-aos="animation-translate-right"]
+	transform: translateX(-30px)
+	opacity: 0
+	transition-property: transform, opacity
+	&.aos-animate 
+		transform: translateX(0)
+		opacity: 1
+
+[data-aos="animation-translate-up"]
+	transform: translateY(40px)
+	opacity: 0
+	transition-property: transform, opacity
+	&.aos-animate 
+		transform: translateY(0)
+		opacity: 1
+
+[data-aos="animation-scale-y"]
+	transform: translateY(40px) scaleY(1.4)
+	opacity: 0
+	transition-property: transform, opacity
+	&.aos-animate 
+		transform: translateY(0) scaleY(1)
+		opacity: 1 
+
+
+// -------------------------------------------------------
+
+.features
+	position: relative
+	padding: 150px 0 100px
+	overflow: hidden
+	background: $dark
+	color: $wh
+	+m
+		padding: 80px 0 30px
+	&__center
+		position: relative
+		z-index: 2
+	&__head
+		display: flex
+		margin-bottom: 192px
+		+d
+			margin-bottom: 212px
+		+t
+			margin-bottom: 100px
+		+m
+			display: block
+			margin-bottom: 15px
+	&__stage
+		flex-shrink: 0
+		width: 268px  
+		padding-top: 7px
+		color: $white
+		+d
+			width: 216px
+		+m
+			width: 100% 
+			margin-bottom: 16px
+	&__title
+		margin-bottom: 48px
+		+d
+			margin-bottom: 32px
+	&__info
+		max-width: 505px
+		color: rgba($wh, .5) 
+		margin-bottom: 40px;
+		line-height: 1.77778;
+		+m
+			max-width: 100% 
+		+a
+			max-width: 100% 
+		&:last-child
+			margin-bottom: 0
+	&__body
+		position: relative
+		padding-left: 268px
+		+d
+			padding-left: 216px
+		+m
+			padding: 0
+		&:before
+			content: ""
+			position: absolute
+			top: -85px
+			left: calc(50% + 200px)
+			width: 1000px
+			height: 1px
+			background: #FFBABA
+			+d
+				left: calc(50% + 160px)
+			+t
+				display: none
+	&__container
+		margin: 0 -65px
+		+d
+			margin: 0 -55px
+		+m
+			margin: 0 -10px  
+	&__slider
+		visibility: hidden
+		&.slick-initialized
+			visibility: visible
+	&__slide
+		padding: 0 65px 
+		+d
+			padding: 0 55px
+		+m
+			padding: 0 10px  
+		&:first-child,
+		&:nth-child(3),
+		&:nth-child(5)
+			.features__preview
+				top: 10px
+				left: -8px
+				width: 180px
+		&:nth-child(2),
+		&:nth-child(4)
+			.features__preview
+				top: 0
+				left: -20px
+				width: 160px
+	&__details
+		position: relative
+		padding-top: 115px
+	&__preview
+		position: absolute
+		font-size: 0
+	&__pic
+		width: 100% 
+	&__category
+		margin-bottom: 35px
+		// +fd
+		font-size: 24px
+		font-weight: 500
+		line-height: 1.4
+		letter-spacing: -.04em  
+		+d
+			margin-bottom: 24px
+			font-size: 20px
+	&__text
+		margin-bottom: 40px
+		color: rgba($wh, .5) 
+		+d
+			margin-bottom: 32px
+			font-size: 15px
+		+a
+			max-width: 250px
+	&__link
+		position: relative
+		display: inline-block
+		font-weight: 500 
+		color: rgba($wh, .5) 
+		transition: all .25s
+		+m
+			font-size: 16px
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 0
+			width: 0
+			height: 1px
+			background: $wh
+			transition: width .25s 
+		&:hover
+			padding-left: 50px
+			color: $wh 
+			&:before
+				width: 34px
+	&__status
+		position: absolute
+		left: 0
+		bottom: 186px
+		display: flex
+		justify-content: space-between
+		width: 135px
+		// +fd
+		font-size: 14px
+		font-weight: 500
+		+d
+			bottom: 169px 
+		+t
+			bottom: 126px
+		+m
+			top: -80px
+			left: auto
+			right: 0
+			bottom: auto
+			width: 115px
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 40px
+			height: 1px
+			background: $wh 
+	&__bg
+		position: absolute
+		top: 0
+		left: calc(50% - 1142px) 
+		font-size: 0
+		+d
+			left: calc(50% - 1042px) 
+			width: 1100px
+		+m
+			top: -30px
+			left: auto
+			right: -245px
+			width: 915px
+		&[data-aos]
+			transform: rotate(30deg) 
+			&.aos-animate
+				transform: rotate(0)
+	&__circle
+		position: absolute
+		top: 415px
+		right: calc(50% - 520px)
+		width: 268px
+		height: 268px
+		border-radius: 50%
+		background: $primary 
+		+d
+			right: calc(50% - 590px)
+			opacity: .5
+		+m
+			top: 37px
+			right: -200px
+	&__image
+		position: absolute
+		top: 285px
+		right: calc(50% - 600px)
+		width: 375px
+		height: 429px
+		+d
+			right: calc(50% - 590px)
+		+m
+			top: 0px
+			right: 0px
+			position: relative
+			display: block
+		img 
+			width: 100%
+			height: 100%
+
+	.status__all
+		color: rgba($wh, .3)  
+	.slick-arrow
+		position: absolute
+		bottom: 6px
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		border: 1px solid rgba($wh, .2)
+		font-size: 0
+		transition: all .25s 
+		+m
+			top: -88px
+			bottom: auto
+		.icon
+			font-size: 12px
+			fill: $wh
+		&:hover
+			background: $primary
+			border-color: $primary  
+	.slick-prev
+		left: -203px
+		+d
+			left: -161px
+		+m
+			left: 10px
+	.slick-next
+		left: -146px 
+		+d
+			left: -104px
+		+m
+			left: 67px
+
+
+.legal
+	h2
+		padding: 30px 0 30px 0
+	&__center
+		max-width: 1036px
+	&__date
+		margin-bottom: 23px
+		color: $dark
+	&__title
+		margin-bottom: 26px
+		font-weight: 600 
+		+d
+			font-size: 40px
+	&__note
+		margin-bottom: 60px
+		font-size: 20px
+		line-height: 1.2
+
+
+.showcase
+	position: relative
+	height: 1963px
+	// margin-bottom: 100px
+	padding-top: 112px
+	overflow: hidden
+	background: $gray-light 
+	background: $white 
+	+d
+		margin-bottom: 40px
+	+t
+		height: 1500px
+		padding-top: 90px
+	+m
+		height: 1115px
+		margin-bottom: 0 
+		padding-top: 72px
+	&__wrap
+		position: relative
+		z-index: 3
+		max-width: 500px
+		+m
+			max-width: 100%
+			text-align: center 
+	&__stage
+		margin-bottom: 24px
+		// color: $purple
+		+m
+			margin-bottom: 16px
+	&__title
+		margin-bottom: 48px
+		+t
+			margin-bottom: 32px
+	&__info
+		max-width: 410px
+		margin-bottom: 45px
+		+m
+			margin: 0
+	&__btn .btn
+		min-width: 233px
+		height: 82px
+		+m
+			display: none
+	&__bg,
+	&__circle,
+	&__list
+		position: absolute
+		font-size: 0
+	&__bg,
+	&__circle
+		z-index: 1
+	&__bg
+		top: 112px
+		right: calc(50% - 904px)
+		&:before
+			content: ""
+			position: absolute 
+			// top: 112px
+			// left: 50%
+			z-index: -1
+			width: 100%
+			height: 100%
+			border-radius: 50% 
+			background: $primary
+			// opacity: .5 
+		+d
+			right: calc(50% - 950px)
+		+m
+			top: 382px
+			right: -140px
+			width: 411px
+		img
+			visibility: hidden
+	&__bg &__pic
+		width: 100% 
+	&__circle
+		border-radius: 50%
+		&:first-child
+			top: 207px
+			left: calc(50% - 814px)
+			width: 191px
+			height: 191px
+			background: $yellow 
+		&:nth-child(2)
+			top: 642px
+			left: calc(50% - 560px)
+			width: 80px
+			height: 80px
+			background: $red
+			+d
+				left: 32px
+			+t
+				top: 550px
+	&__list
+		top: 454px
+		left: 50%
+		transform: translateX(-35.6%) rotate(-30deg)
+		z-index: 2 
+		+m
+			top: 350px
+	&__preview
+		font-size: 0
+		+m
+			width: 1000px
+		&:first-child
+			+t
+				width: 1400px
+			+m
+				width: 1000px
+		&:nth-child(2)
+			position: relative
+			z-index: 2
+			margin-top: -220px
+			+t
+				margin-top: -150px
+				width: 1160px
+			+m
+				width: 830px
+				margin-top: -105px
+	&__preview &__pic
+		+t
+			width: 100% 
+
+
+.speed
+	position: relative
+	margin-bottom: 302px
+	margin-top: 80px
+	+d
+		margin-bottom: 320px
+	+t
+		margin-bottom: 210px
+	+m
+		margin-bottom: 40px
+	&__wrap
+		+m
+			margin-bottom: 32px
+	&__head
+		margin-bottom: 80px
+		+d
+			margin-bottom: 40px
+		+m
+			margin-bottom: 32px
+	&__stage
+		margin-bottom: 24px
+		// color: $secondary
+		+m
+			margin-bottom: 16px
+	&__title
+		margin-bottom: 56px
+		+d
+			margin-bottom: 32px
+		+m
+			br
+				display: none
+		+a
+			br
+				display: block
+	&__text
+		max-width: 320px
+		line-height: 1.7
+		// line-height: 1.3
+		+d
+			max-width: 275px
+	&__number
+		// +fd
+		font-size: 80px
+		line-height: 1
+		font-weight: 500
+		max-width: 330px
+		color: $text-light
+		+m
+			margin-left: -10px
+		span
+			margin-right: 30px
+			// +f
+			font-size: 200px
+			letter-spacing: -.05em
+			font-weight: 600
+			+m
+				font-size: 200px
+		div.faster
+			// text-align: center
+			font-size: 40px
+			text-align: center
+			font-weight: 900
+	&__line,
+	&__preview,
+	&__circle,
+	&__plant
+		position: absolute
+		font-size: 0
+		pointer-events: none
+	&__pic
+		width: 100%   
+	&__line
+		top: 182px
+		left: 0
+		right: 0
+		+m
+			top: auto
+			left: -300px
+			right: -300px        
+			bottom: 300px
+	&__preview
+		top: -25px
+		right: calc(50% - 429px) 
+		width: 408px
+		+d
+			top: -90px
+		+t
+			top: -20px
+			right: calc(50% - 400px)
+			width: 330px
+		+m
+			position: relative
+			top: auto
+			right: auto
+			width: 310px
+			margin: 0 auto 
+		&:before
+			content: ""
+			position: absolute 
+			top: 112px
+			left: 50%
+			z-index: -1
+			width: 592px
+			height: 592px
+			margin-left: -294px
+			border-radius: 50% 
+			background: $primary 
+			+d
+				top: 110px
+			+t
+				top: 77px
+				width: 500px
+				height: 500px
+				margin-left: -250px
+			+m
+				top: 84px
+				width: 452px
+				height: 452px
+				margin-left: -226px
+		&[data-aos]
+			&:before
+				transform: scale(.5)
+				opacity: 1
+				transition: all .4s
+			.speed__graphic
+				transform: translateY(-100px)
+				opacity: 0
+				transition: all .5s
+				transition-delay: .4s
+			.speed__plant
+				transform: translateX(60px) skewX(-30deg)
+				opacity: 0
+				transition: all .3s
+				transition-delay: .6s
+			&.aos-animate
+				&:before
+					transform: scale(1)
+					opacity: 1
+				.speed__graphic
+					transform: translateY(0)
+					opacity: 1
+				.speed__plant
+					transform: translateX(0) skewX(0)
+					opacity: 1
+	&__plant
+		left: 330px
+		bottom: 135px
+		width: 380px
+		+d
+			width: 300px
+			left: 255px
+		+t
+			display: none
+	&__circle
+		z-index: -1
+		border-radius: 50% 
+		&:first-child
+			top: 240px
+			left: calc(50% - 627px)
+			width: 32px
+			height: 32px
+			background: $primary
+			+m
+				top: 172px
+				right: -16px
+				left: auto 
+		&:nth-child(2)
+			top: 112px
+			left: calc(50% - 436px)
+			width: 120px
+			height: 120px
+			background: $yellow 
+			+d
+				left: calc(50% - 360px)
+			+m
+				top: 48px
+				left: 115px
+		&:nth-child(3)
+			+m
+				top: 530px
+				left: -32px
+				width: 64px
+				height: 64px
+				background: $pink 
+			
